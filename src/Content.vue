@@ -24,19 +24,19 @@
     <!-- Content -->
     <div class="relative overflow-x-hidden flex flex-col items-center">
         <!-- Ar-Rum -->
-        <div class="panel h-screen flex flex-col justify-center items-center mx-12 lg:w-1/2 z-10" id="ar-rum">
+        <div class="panel h-dvh flex flex-col justify-center items-center mx-12 lg:w-1/2 z-10" id="ar-rum">
             <span class="font-bold text-brown-darkest mb-4">Q.S. Ar Rum: 21</span>
             <p class="font-semibold text-blue-darkest text-center">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
         </div>
 
         <!-- Salam -->
-        <div class="panel h-screen flex flex-col justify-center items-center mx-12 z-10" id="salam">
+        <div class="panel h-dvh flex flex-col justify-center items-center mx-12 z-10" id="salam">
             <span class="font-bold text-brown-darkest mb-4">Assalamu'alaikum Wr Wb</span>
             <p class="font-semibold text-blue-darkest text-center">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami</p>
         </div>
 
         <!-- Couple -->
-        <div class="panel h-screen flex flex-col justify-between items-center" id="couple">
+        <div class="panel h-dvh flex flex-col justify-between items-center" id="couple">
             <initial colors="#748B95" id="initial-couple" class="mt-14 opacity-0"></initial>
             
             <div class="flex flex-col h-auto items-center mb-16 relative">
@@ -94,7 +94,7 @@
         </div>
 
         <!-- Akad -->
-        <div class="panel h-screen flex flex-col justify-start items-center relative w-full" id="akad">
+        <div class="panel h-dvh flex flex-col justify-start items-center relative w-full" id="akad">
             <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
             <div class="absolute inset-0 flex flex-col justify-center items-center">
@@ -140,7 +140,7 @@
         </div>
 
         <!-- Resepsi -->
-        <div class="panel h-screen flex flex-col justify-start items-center relative w-full" id="resepsi">
+        <div class="panel h-dvh flex flex-col justify-start items-center relative w-full" id="resepsi">
             <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="resepsi-nikah">Resepsi Pernikahan</span>
 
             <div class="grid grid-cols-4 gap-3 lg:gap-4 my-10 text-tosca-darkest opacity-0" id="timespan">
@@ -204,7 +204,7 @@
         </div>
 
         <!-- Denah -->
-        <div class="panel h-screen flex flex-col justify-start items-center relative w-full" id="denah">
+        <div class="panel h-dvh flex flex-col justify-start items-center relative w-full" id="denah">
 
             <span class="name my-16 text-3xl text-brown-darkest font-semibold opacity-0" id="denah-lokasi">Denah Lokasi</span>
 
@@ -226,7 +226,7 @@
         </div>
 
         <!-- Gift -->
-        <div class="panel bg-brown-lightest h-screen flex flex-col justify-center items-center relative w-full" id="gift">
+        <div class="panel bg-brown-lightest h-dvh flex flex-col justify-center items-center relative w-full" id="gift">
             <!-- Gift Header -->
             <div class="absolute top-0 w-full z-20 -left-40" id="gift-header">
                 <div id="rectangle-top" class="box-gift top-0 absolute w-full h-44 rounded-br-10xl z-20 opacity-0"></div>
@@ -258,7 +258,7 @@
         </div>
 
         <!-- Wishes -->
-        <div class="panel bg-brown-lightest h-screen flex flex-col justify-center items-center relative w-full" id="wishes">
+        <div class="panel bg-brown-lightest h-dvh flex flex-col justify-center items-center relative w-full" id="wishes">
             <div class="flex flex-col items-center my-5 z-20 w-full lg:w-1/2 px-6">
                 <initial colors="#748B95" id="initial-wishes" class="opacity-80"></initial>
 
