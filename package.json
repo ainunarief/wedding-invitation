@@ -8,14 +8,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "appwrite": "^14.0.0-rc.5",
     "gsap": "^3.12.3",
     "vite-plugin-svgr": "^4.2.0",
     "vue": "^3.4.21",
+    "vue-fullpage.js": "^0.2.17",
     "vue3-lottie": "^3.2.0"
   },
   "devDependencies": {
