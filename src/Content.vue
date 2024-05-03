@@ -26,24 +26,24 @@
         <!-- <full-page ref="fullpage" :options="options" id="fullpage" class="overflow-x-hidden"> -->
         
         <!-- Ar-Rum -->
-        <div class="section relative items-center px-12 lg:w-1/2 w-full z-20" id="ar-rum">
-            <div class="h-dvh flex flex-col justify-center items-center">
+        <div class="section relative h-dvh flex flex-col justify-center items-center px-12 lg:w-1/2 w-full z-20" id="ar-rum">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center"> -->
                 <span class="font-bold text-brown-darkest mb-4 text-center mb-4">Q.S. Ar Rum: 21</span>
                 <p class="font-semibold text-blue-darkest text-center">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Salam -->
-        <div class="section relative items-center px-12 w-full z-20" id="salam">
-            <div class="h-dvh flex flex-col justify-center items-center">
+        <div class="section relative h-dvh flex flex-col justify-center items-center px-12 w-full z-20" id="salam">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center"> -->
                 <span class="font-bold text-brown-darkest mb-4">Assalamu'alaikum Wr Wb</span>
                 <p class="font-semibold text-blue-darkest text-center">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami</p>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Couple -->
-        <div class="section relative items-center overflow-x-hidden w-full z-20" id="couple">
-            <div class="h-dvh flex flex-col justify-between items-center w-full">
+        <div class="section relative h-dvh flex flex-col justify-between items-center overflow-x-hidden w-full z-20" id="couple">
+            <!-- <div class=" items-center w-full"> -->
                 <initial colors="#748B95" id="initial-couple" class="mt-14 opacity-0"></initial>
                 
                 <div class="flex flex-col h-auto items-center mb-16 relative">
@@ -98,12 +98,12 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Akad -->
-        <div class="section items-center relative w-full" id="akad">
-            <div class="h-dvh flex flex-col justify-start items-center w-full">
+        <div class="section h-dvh flex flex-col justify-start items-center relative w-full" id="akad">
+            <!-- <div class="h-dvh flex flex-col justify-start items-center w-full"> -->
                 <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
                 <div class="absolute inset-0 flex flex-col justify-center items-center">
@@ -145,13 +145,13 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
 
         </div>
 
         <!-- Resepsi -->
-        <div class="section items-center relative w-full" id="resepsi">
-            <div class="h-dvh flex flex-col justify-start items-center w-full">
+        <div class="section h-dvh flex flex-col justify-start items-center relative w-full" id="resepsi">
+            <!-- <div class="h-dvh flex flex-col justify-start items-center w-full"> -->
                 <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="resepsi-nikah">Resepsi Pernikahan</span>
 
                 <div class="grid grid-cols-4 gap-3 lg:gap-4 my-10 text-tosca-darkest opacity-0" id="timespan">
@@ -212,12 +212,12 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Denah -->
-        <div class="section items-center relative w-full" id="denah">
-            <div class="h-dvh flex flex-col justify-start items-center w-full">
+        <div class="section h-dvh flex flex-col justify-start items-center relative w-full" id="denah">
+            <!-- <div class="h-dvh flex flex-col justify-start items-center w-full"> -->
 
                 <span class="name my-16 text-3xl text-brown-darkest font-semibold opacity-0" id="denah-lokasi">Denah Lokasi</span>
 
@@ -236,12 +236,12 @@
                         </button>
                     </div>                
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Gift -->
-        <div class="section bg-brown-lightest items-center relative w-full" id="gift">
-            <div class="h-dvh flex flex-col justify-center items-center w-full">
+        <div class="section bg-brown-lightest h-dvh flex flex-col justify-center  items-center relative w-full" id="gift">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center w-full"> -->
                 <!-- Gift Header -->
                 <div class="absolute top-0 w-full z-20 -left-40 opacity-0" id="gift-header">
                     <div id="rectangle-top" class="box-gift top-0 absolute w-full h-44 rounded-br-10xl z-20 opacity-0"></div>
@@ -270,12 +270,12 @@
                     <div id="rectangle-bottom" class="box-gift bottom-0 absolute w-full h-44 rounded-tl-10xl z-20 opacity-0"></div>
                     <img :src="giftBottom" alt="gift-footer" class="bottom-0 absolute rounded-tl-10xl z-20" />
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Wishes -->
-        <div class="section bg-brown-lightest h-dvh items-center relative w-full" id="wishes">
-            <div class="h-dvh flex flex-col justify-center items-center w-full">
+        <div class="section bg-brown-lightest h-dvh flex flex-col justify-center items-center relative w-full" id="wishes">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center w-full"> -->
                 <div class="flex flex-col items-center my-5 z-20 w-full lg:w-1/2 px-6">
                     <initial colors="#748B95" id="initial-wishes" class="opacity-80"></initial>
 
@@ -303,7 +303,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
     <!-- </full-page> -->
