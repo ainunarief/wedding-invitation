@@ -222,7 +222,7 @@
                 <span class="name my-16 text-3xl text-brown-darkest font-semibold opacity-0" id="denah-lokasi">Denah Lokasi</span>
 
                 <div class="flex flex-col w-full lg:w-1/2 px-2 mt-20">
-                    <div class="box-gift flex flex-col px-1 py-5 rounded-2xl text-blue-darkest w-full opacity-0 mt-40" id="denah-image">
+                    <div class="box-gift flex flex-col px-1 py-5 rounded-2xl text-blue-darkest w-full opacity-0 mt-20" id="denah-image">
                         <img :src="denah" alt="denah">
                     </div>
 
@@ -332,6 +332,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 licenseKey: 'gplv3-license',
                 scrollBar: true,
                 scrollingSpeed: 1700,
+                touchSensitivity: 15,
                 scrollOverflow: true,
                 normalScrollElements: '#list-wishes'
             },
