@@ -50,11 +50,6 @@
 </script>
 
 <style>
-.fp-overflow {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .name{
     font-family: 'Dancing Script', serif;
 }
