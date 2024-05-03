@@ -22,11 +22,11 @@
     <img :src="flowerBottomRight" alt="flower-right-corner" class="fixed -right-20 -bottom-20 opacity-0 z-10" width="350" id="flower-right-corner" fetchpriority="high">
 
     <!-- Content -->
-    <!-- <div class="relative overflow-x-hidden flex flex-col items-center z-20"> -->
-        <full-page ref="fullpage" :options="options" id="fullpage" class="overflow-x-hidden">
+    <div class="relative overflow-x-hidden flex flex-col items-center">
+        <!-- <full-page ref="fullpage" :options="options" id="fullpage" class="overflow-x-hidden"> -->
         
         <!-- Ar-Rum -->
-        <div class="section relative items-center px-12 lg:w-1/2" id="ar-rum">
+        <div class="section relative items-center px-12 lg:w-1/2 w-full z-20" id="ar-rum">
             <div class="h-dvh flex flex-col justify-center items-center">
                 <span class="font-bold text-brown-darkest mb-4 text-center mb-4">Q.S. Ar Rum: 21</span>
                 <p class="font-semibold text-blue-darkest text-center">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Salam -->
-        <div class="section relative items-center px-12 z-10" id="salam">
+        <div class="section relative items-center px-12 w-full z-20" id="salam">
             <div class="h-dvh flex flex-col justify-center items-center">
                 <span class="font-bold text-brown-darkest mb-4">Assalamu'alaikum Wr Wb</span>
                 <p class="font-semibold text-blue-darkest text-center">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami</p>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Couple -->
-        <div class="section relative items-center overflow-x-hidden" id="couple">
+        <div class="section relative items-center overflow-x-hidden w-full z-20" id="couple">
             <div class="h-dvh flex flex-col justify-between items-center w-full">
                 <initial colors="#748B95" id="initial-couple" class="mt-14 opacity-0"></initial>
                 
@@ -102,7 +102,7 @@
         </div>
 
         <!-- Akad -->
-        <div class="section items-center relative" id="akad">
+        <div class="section items-center relative w-full" id="akad">
             <div class="h-dvh flex flex-col justify-start items-center w-full">
                 <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
@@ -150,7 +150,7 @@
         </div>
 
         <!-- Resepsi -->
-        <div class="section items-center relative" id="resepsi">
+        <div class="section items-center relative w-full" id="resepsi">
             <div class="h-dvh flex flex-col justify-start items-center w-full">
                 <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="resepsi-nikah">Resepsi Pernikahan</span>
 
@@ -216,7 +216,7 @@
         </div>
 
         <!-- Denah -->
-        <div class="section items-center relative" id="denah">
+        <div class="section items-center relative w-full" id="denah">
             <div class="h-dvh flex flex-col justify-start items-center w-full">
 
                 <span class="name my-16 text-3xl text-brown-darkest font-semibold opacity-0" id="denah-lokasi">Denah Lokasi</span>
@@ -226,8 +226,8 @@
                         <img :src="denah" alt="denah">
                     </div>
 
-                    <div class="flex flex-col mt-10 justify-start items-center">
-                        <button class="button-download py-4 px-8 flex items-center rounded-full text-blue-darkest font-semibold" id="simpan-tanggal" @click="downloadDenah">
+                    <div class="flex flex-col mt-10 justify-start items-center opacity-0 pt-8" id="donwload-denah">
+                        <button class="button-download py-4 px-8 flex items-center rounded-full text-blue-darkest font-semibold" id="button-denah" @click="downloadDenah">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.5C9.74566 1.5 7.58365 2.39553 5.98959 3.98959C4.39553 5.58365 3.5 7.74566 3.5 10C3.5 13.299 5.63287 16.4271 7.86298 18.7811C8.96781 19.9473 10.0743 20.9004 10.9052 21.562C11.3203 21.8925 11.6655 22.1495 11.906 22.3232C11.9394 22.3473 11.9708 22.3698 12 22.3906C12.0292 22.3698 12.0606 22.3473 12.094 22.3232C12.3345 22.1495 12.6797 21.8925 13.0948 21.562C13.9257 20.9004 15.0322 19.9473 16.137 18.7811C18.3671 16.4271 20.5 13.299 20.5 10C20.5 7.74566 19.6045 5.58365 18.0104 3.98959C16.4163 2.39553 14.2543 1.5 12 1.5ZM12 23C11.7226 23.416 11.7225 23.4159 11.7223 23.4158L11.7218 23.4155L11.7201 23.4143L11.7144 23.4105L11.6933 23.3962C11.675 23.3838 11.6485 23.3657 11.6142 23.3419C11.5458 23.2945 11.4464 23.2248 11.3205 23.1339C11.0689 22.9521 10.711 22.6856 10.2823 22.3443C9.42567 21.6621 8.28219 20.6777 7.13702 19.4689C4.86713 17.0729 2.5 13.701 2.5 10C2.5 7.48044 3.50089 5.06408 5.28249 3.28249C7.06408 1.50089 9.48044 0.5 12 0.5C14.5196 0.5 16.9359 1.50089 18.7175 3.28249C20.4991 5.06408 21.5 7.48044 21.5 10C21.5 13.701 19.1329 17.0729 16.863 19.4689C15.7178 20.6777 14.5743 21.6621 13.7177 22.3443C13.289 22.6856 12.9311 22.9521 12.6795 23.1339C12.5536 23.2248 12.4542 23.2945 12.3858 23.3419C12.3515 23.3657 12.325 23.3838 12.3067 23.3962L12.2856 23.4105L12.2799 23.4143L12.2782 23.4155L12.2777 23.4158C12.2775 23.4159 12.2774 23.416 12 23ZM12 23L12.2774 23.416C12.1094 23.528 11.8906 23.528 11.7226 23.416L12 23Z" fill="#597199"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C10.6193 7.5 9.5 8.61929 9.5 10C9.5 11.3807 10.6193 12.5 12 12.5C13.3807 12.5 14.5 11.3807 14.5 10C14.5 8.61929 13.3807 7.5 12 7.5ZM8.5 10C8.5 8.067 10.067 6.5 12 6.5C13.933 6.5 15.5 8.067 15.5 10C15.5 11.933 13.933 13.5 12 13.5C10.067 13.5 8.5 11.933 8.5 10Z" fill="#597199"/>
@@ -240,10 +240,10 @@
         </div>
 
         <!-- Gift -->
-        <div class="section bg-brown-lightest items-center relative" id="gift">
+        <div class="section bg-brown-lightest items-center relative w-full" id="gift">
             <div class="h-dvh flex flex-col justify-center items-center w-full">
                 <!-- Gift Header -->
-                <div class="absolute top-0 w-full z-20 -left-40" id="gift-header">
+                <div class="absolute top-0 w-full z-20 -left-40 opacity-0" id="gift-header">
                     <div id="rectangle-top" class="box-gift top-0 absolute w-full h-44 rounded-br-10xl z-20 opacity-0"></div>
                     <img :src="giftHeader" alt="gift-header" class="top-0 absolute rounded-br-10xl z-20"/>
                 </div>
@@ -266,7 +266,7 @@
                 </div>
 
                 <!-- Gift Footer -->
-                <div class="absolute bottom-0 w-full z-20 -right-40" id="gift-footer">
+                <div class="absolute bottom-0 w-full z-20 -right-40 opacity-0" id="gift-footer">
                     <div id="rectangle-bottom" class="box-gift bottom-0 absolute w-full h-44 rounded-tl-10xl z-20 opacity-0"></div>
                     <img :src="giftBottom" alt="gift-footer" class="bottom-0 absolute rounded-tl-10xl z-20" />
                 </div>
@@ -274,7 +274,7 @@
         </div>
 
         <!-- Wishes -->
-        <div class="section bg-brown-lightest h-dvh items-center relative" id="wishes">
+        <div class="section bg-brown-lightest h-dvh items-center relative w-full" id="wishes">
             <div class="h-dvh flex flex-col justify-center items-center w-full">
                 <div class="flex flex-col items-center my-5 z-20 w-full lg:w-1/2 px-6">
                     <initial colors="#748B95" id="initial-wishes" class="opacity-80"></initial>
@@ -306,8 +306,8 @@
             </div>
         </div>
 
-    </full-page>
-    <!-- </div> -->
+    <!-- </full-page> -->
+    </div>
 
 </template>
 
@@ -333,7 +333,6 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrollBar: true,
                 scrollingSpeed: 1700,
                 touchSensitivity: 15,
-                scrollOverflow: true,
                 normalScrollElements: '#list-wishes'
             },
 
@@ -418,17 +417,17 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
 
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-        // let sections = gsap.utils.toArray(".panel");
+        let sections = gsap.utils.toArray(".section");
 
-        // sections.forEach((eachPanel,i) => {
-        //     ScrollTrigger.create({
-        //         trigger: eachPanel,
-        //         start: "top bottom-=1",
-        //         end: "bottom top+=1",
-        //         onEnter: () => this.goToSection(eachPanel),
-        //         onEnterBack: () => this.goToSection(eachPanel)
-        //     });
-        // });
+        sections.forEach((eachPanel,i) => {
+            ScrollTrigger.create({
+                trigger: eachPanel,
+                start: "top bottom-=1",
+                end: "bottom top+=1",
+                onEnter: () => this.goToSection(eachPanel),
+                onEnterBack: () => this.goToSection(eachPanel)
+            });
+        });
 
         // Ar-Rum transition
         gsap.from(['#flower-left-top', '#flower-right-top'], {
@@ -751,7 +750,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             opacity: 1
         }, ">")
 
-        gsap.to(['#denah-image'], {
+        gsap.to(['#denah-image', '#donwload-denah'], {
             scrollTrigger:{
                 trigger: '#denah-image',
                 start: "top center", 
