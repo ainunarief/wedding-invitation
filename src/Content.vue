@@ -100,7 +100,7 @@
         </div>
 
         <!-- Akad -->
-        <div class="section h-screen flex flex-col justify-start items-center w-full" id="akad">
+        <div class="section h-screen flex flex-col justify-start items-center relative w-full" id="akad">
             <!-- <div class="h-dvh flex flex-col justify-start items-center w-full"> -->
                 <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
