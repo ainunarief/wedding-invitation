@@ -18,19 +18,24 @@
 
     <img :src="flowerDecor" alt="flower-bottom" class="fixed inset-0 m-auto -bottom-80 w-full lg:w-1/3 px-3 rotate-180 opacity-0" id="flower-bottom">
 
+    <img :src="frameUrl" alt="frame" class="fixed h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
+
+    <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed -left-28 -top-28 z-10 opacity-0" id="bg-flower-top-left">
+    <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed -right-28 -bottom-28 z-10 rotate-180 opacity-0" id="bg-flower-bottom-right">
+
     <img :src="flowerTopLeft" alt="flower-left-corner" class="fixed -left-20 -top-20 opacity-0 z-10" width="350" id="flower-left-corner" fetchpriority="high">
     <img :src="flowerBottomRight" alt="flower-right-corner" class="fixed -right-20 -bottom-20 opacity-0 z-10" width="350" id="flower-right-corner" fetchpriority="high">
 
     <!-- Content -->
     <div class="relative overflow-x-hidden flex flex-col items-center">
         <!-- Ar-Rum -->
-        <div class="panel h-screen flex flex-col justify-center items-center mx-12 lg:w-1/2 z-10" id="ar-rum">
+        <div class="panel h-screen flex flex-col justify-center items-center mx-12 lg:w-1/2 z-20" id="ar-rum">
             <span class="font-bold text-brown-darkest mb-4">Q.S. Ar Rum: 21</span>
             <p class="font-semibold text-blue-darkest text-center">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
         </div>
 
         <!-- Salam -->
-        <div class="panel h-screen flex flex-col justify-center items-center mx-12 z-10" id="salam">
+        <div class="panel h-screen flex flex-col justify-center items-center mx-12 z-20" id="salam">
             <span class="font-bold text-brown-darkest mb-4">Assalamu'alaikum Wr Wb</span>
             <p class="font-semibold text-blue-darkest text-center">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami</p>
         </div>
@@ -39,7 +44,7 @@
         <div class="panel h-screen flex flex-col justify-between items-center" id="couple">
             <initial colors="#748B95" id="initial-couple" class="mt-14 opacity-0"></initial>
 
-            <div class="flex flex-col h-auto items-center mb-16 relative">
+            <div class="flex flex-col h-auto items-center mb-20 relative">
                 <!-- Bride Info -->
                 <div class="flex flex-col items-center mb-8 static -ml-40 opacity-0" id="bride-info">
 
@@ -48,12 +53,12 @@
                         <span class="absolute bottom-0 left-0 -ml-28 name text-7xl font-bold text-brown-darkest opacity-30" id="bride-nickname">Ainun</span>
                     </div>
 
-                    <span class="text-sm text-tosca-darkest font-semibold text-center my-2">Putri dari Bapak Mhd. Hasymi<br/>dan Ibu Herlina</span>
-                    <button class="bg-pink p-1 rounded-md">
+                    <span class="text-sm text-tosca-darkest font-semibold text-center my-2">Putri dari Bpk. H. Mhd. Hasymi SE, Akt, MSi, CA, ACPA<br/>& Ibu Dra. Hj. Herlina</span>
+                    <button class="bg-brown p-1 rounded-md" @clik="openIG('nia_arahmania')">
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.125 2.1875C3.95038 2.1875 2.1875 3.95038 2.1875 6.125V14.875C2.1875 17.0496 3.95038 18.8125 6.125 18.8125H14.875C17.0496 18.8125 18.8125 17.0496 18.8125 14.875V6.125C18.8125 3.95038 17.0496 2.1875 14.875 2.1875H6.125ZM1.3125 6.125C1.3125 3.46713 3.46713 1.3125 6.125 1.3125H14.875C17.5329 1.3125 19.6875 3.46713 19.6875 6.125V14.875C19.6875 17.5329 17.5329 19.6875 14.875 19.6875H6.125C3.46713 19.6875 1.3125 17.5329 1.3125 14.875V6.125Z" fill="#D698D6"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9871 7.43279C10.3499 7.3383 9.69912 7.44714 9.12735 7.74382C8.55558 8.0405 8.09192 8.50991 7.80231 9.08529C7.51271 9.66068 7.4119 10.3127 7.51424 10.9487C7.61658 11.5847 7.91684 12.1722 8.37233 12.6277C8.82782 13.0832 9.41533 13.3834 10.0513 13.4858C10.6873 13.5881 11.3393 13.4873 11.9147 13.1977C12.4901 12.9081 12.9595 12.4444 13.2562 11.8727C13.5529 11.3009 13.6617 10.6501 13.5672 10.0129C13.4708 9.36299 13.168 8.76126 12.7034 8.29665C12.2387 7.83203 11.637 7.52917 10.9871 7.43279ZM8.72435 6.96715C9.45948 6.5857 10.2962 6.44577 11.1154 6.56725C11.9511 6.69117 12.7247 7.08057 13.3221 7.67793C13.9194 8.27529 14.3088 9.04894 14.4328 9.8846C14.5542 10.7038 14.4143 11.5405 14.0329 12.2757C13.6514 13.0108 13.0479 13.6069 12.3081 13.9793C11.5683 14.3516 10.73 14.4812 9.9123 14.3497C9.09461 14.2181 8.33924 13.832 7.75361 13.2464C7.16799 12.6608 6.78193 11.9054 6.65035 11.0877C6.51878 10.27 6.64838 9.43168 7.02073 8.6919C7.39308 7.95212 7.98922 7.34859 8.72435 6.96715Z" fill="#D698D6"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.875 5.6875C14.875 5.44588 15.0709 5.25 15.3125 5.25H15.3213C15.5629 5.25 15.7587 5.44588 15.7587 5.6875C15.7587 5.92912 15.5629 6.125 15.3213 6.125H15.3125C15.0709 6.125 14.875 5.92912 14.875 5.6875Z" fill="#D698D6"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.125 2.1875C3.95038 2.1875 2.1875 3.95038 2.1875 6.125V14.875C2.1875 17.0496 3.95038 18.8125 6.125 18.8125H14.875C17.0496 18.8125 18.8125 17.0496 18.8125 14.875V6.125C18.8125 3.95038 17.0496 2.1875 14.875 2.1875H6.125ZM1.3125 6.125C1.3125 3.46713 3.46713 1.3125 6.125 1.3125H14.875C17.5329 1.3125 19.6875 3.46713 19.6875 6.125V14.875C19.6875 17.5329 17.5329 19.6875 14.875 19.6875H6.125C3.46713 19.6875 1.3125 17.5329 1.3125 14.875V6.125Z" fill="#98877B"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9871 7.43279C10.3499 7.3383 9.69912 7.44714 9.12735 7.74382C8.55558 8.0405 8.09192 8.50991 7.80231 9.08529C7.51271 9.66068 7.4119 10.3127 7.51424 10.9487C7.61658 11.5847 7.91684 12.1722 8.37233 12.6277C8.82782 13.0832 9.41533 13.3834 10.0513 13.4858C10.6873 13.5881 11.3393 13.4873 11.9147 13.1977C12.4901 12.9081 12.9595 12.4444 13.2562 11.8727C13.5529 11.3009 13.6617 10.6501 13.5672 10.0129C13.4708 9.36299 13.168 8.76126 12.7034 8.29665C12.2387 7.83203 11.637 7.52917 10.9871 7.43279ZM8.72435 6.96715C9.45948 6.5857 10.2962 6.44577 11.1154 6.56725C11.9511 6.69117 12.7247 7.08057 13.3221 7.67793C13.9194 8.27529 14.3088 9.04894 14.4328 9.8846C14.5542 10.7038 14.4143 11.5405 14.0329 12.2757C13.6514 13.0108 13.0479 13.6069 12.3081 13.9793C11.5683 14.3516 10.73 14.4812 9.9123 14.3497C9.09461 14.2181 8.33924 13.832 7.75361 13.2464C7.16799 12.6608 6.78193 11.9054 6.65035 11.0877C6.51878 10.27 6.64838 9.43168 7.02073 8.6919C7.39308 7.95212 7.98922 7.34859 8.72435 6.96715Z" fill="#98877B"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.875 5.6875C14.875 5.44588 15.0709 5.25 15.3125 5.25H15.3213C15.5629 5.25 15.7587 5.44588 15.7587 5.6875C15.7587 5.92912 15.5629 6.125 15.3213 6.125H15.3125C15.0709 6.125 14.875 5.92912 14.875 5.6875Z" fill="#98877B"/>
                         </svg>
                     </button>
                 </div>
@@ -81,8 +86,8 @@
                         <span class="absolute bottom-0 right-0 -mr-16 name text-7xl font-bold text-brown-darkest opacity-30" id="groom-nickname">Arief</span>
                     </div>
 
-                    <span class="text-sm text-tosca-darkest font-semibold text-center my-2">Putra dari Bapak Sudarman (Alm)<br/>dan Ibu Yenni Fatia Riyani</span>
-                    <button class="bg-brown p-1 rounded-md">
+                    <span class="text-sm text-tosca-darkest font-semibold text-center my-2">Putra dari Bpk. (Alm) Drs. H. Sudarman<br/>& Ibu Hj. Yenni Fatia Riyani</span>
+                    <button class="bg-brown p-1 rounded-md" @clik="openIG('arieftrifianto')">
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.125 2.1875C3.95038 2.1875 2.1875 3.95038 2.1875 6.125V14.875C2.1875 17.0496 3.95038 18.8125 6.125 18.8125H14.875C17.0496 18.8125 18.8125 17.0496 18.8125 14.875V6.125C18.8125 3.95038 17.0496 2.1875 14.875 2.1875H6.125ZM1.3125 6.125C1.3125 3.46713 3.46713 1.3125 6.125 1.3125H14.875C17.5329 1.3125 19.6875 3.46713 19.6875 6.125V14.875C19.6875 17.5329 17.5329 19.6875 14.875 19.6875H6.125C3.46713 19.6875 1.3125 17.5329 1.3125 14.875V6.125Z" fill="#98877B"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9871 7.43279C10.3499 7.3383 9.69912 7.44714 9.12735 7.74382C8.55558 8.0405 8.09192 8.50991 7.80231 9.08529C7.51271 9.66068 7.4119 10.3127 7.51424 10.9487C7.61658 11.5847 7.91684 12.1722 8.37233 12.6277C8.82782 13.0832 9.41533 13.3834 10.0513 13.4858C10.6873 13.5881 11.3393 13.4873 11.9147 13.1977C12.4901 12.9081 12.9595 12.4444 13.2562 11.8727C13.5529 11.3009 13.6617 10.6501 13.5672 10.0129C13.4708 9.36299 13.168 8.76126 12.7034 8.29665C12.2387 7.83203 11.637 7.52917 10.9871 7.43279ZM8.72435 6.96715C9.45948 6.5857 10.2962 6.44577 11.1154 6.56725C11.9511 6.69117 12.7247 7.08057 13.3221 7.67793C13.9194 8.27529 14.3088 9.04894 14.4328 9.8846C14.5542 10.7038 14.4143 11.5405 14.0329 12.2757C13.6514 13.0108 13.0479 13.6069 12.3081 13.9793C11.5683 14.3516 10.73 14.4812 9.9123 14.3497C9.09461 14.2181 8.33924 13.832 7.75361 13.2464C7.16799 12.6608 6.78193 11.9054 6.65035 11.0877C6.51878 10.27 6.64838 9.43168 7.02073 8.6919C7.39308 7.95212 7.98922 7.34859 8.72435 6.96715Z" fill="#98877B"/>
@@ -97,9 +102,9 @@
         <div class="panel h-screen flex flex-col justify-start items-center relative w-full" id="akad">
             <span class="name mt-16 text-3xl text-brown-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
-            <div class="absolute inset-0 flex flex-col justify-center items-center">
+            <div class="absolute inset-0 flex flex-col justify-center items-center z-20">
                 <!-- Akad Date -->
-                <div class="flex flex-col justify-center items-center static mt-40 opacity-0" id="event-akad">
+                <div class="flex flex-col justify-center items-center static mt-20 opacity-0" id="event-akad">
                     <span class="font-semibold text-brown text-base">Sabtu</span>
                     <div class="flex relative items-center my-1">
                         <span class="absolute left-0 -ml-10 px-1 text-brown font-medium border-y border-brown-light">Juli</span>
@@ -124,8 +129,8 @@
                 </div>
                 <!-- Akad Location -->
                 <div class="flex flex-col justify-center items-center mt-2 opacity-0" id="location-akad">
-                    <span class="text-tosca-light font-semibold text-base">Masjid Kodam Jaya (Al-Jihad)</span>
-                    <p class="text-tosca-lightest text-sm text-center my-1">Jl. Mayjen Sutoyo No.2, RT.7/RW.7, Cawang, <br /> Kec. Kramat jati, Kota Jakarta Timur, <br />DKI Jakarta 13630</p>
+                    <span class="text-tosca-light font-semibold text-base">Masjid Al-Jihad Makodam Jaya</span>
+                    <p class="text-tosca-lightest text-sm text-center my-1">Jl. Mayjen Sutoyo No.5, Cawang, Kramat Jati,<br />Jakarta Timur</p>
                     <button class="bg-tosca py-2 px-4 rounded-lg flex items-center" @click="openAkadMap">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.16795 1.04392C5.26472 0.988624 5.38271 0.985349 5.4824 1.03519L10.6562 3.62208L15.1679 1.04392C15.2711 0.984966 15.3979 0.985389 15.5006 1.04503C15.6034 1.10467 15.6667 1.21451 15.6667 1.33333V12C15.6667 12.1196 15.6026 12.2301 15.4987 12.2894L10.832 14.9561C10.7353 15.0114 10.6173 15.0147 10.5176 14.9648L5.34382 12.3779L0.832041 14.9561C0.728874 15.015 0.602124 15.0146 0.499353 14.955C0.396581 14.8953 0.333328 14.7855 0.333328 14.6667V4C0.333328 3.88038 0.397424 3.76993 0.501282 3.71059L5.16795 1.04392ZM5.34382 1.71126L0.999995 4.19344V14.0923L5.16795 11.7106C5.26472 11.6553 5.38271 11.652 5.4824 11.7019L10.6562 14.2887L15 11.8066V1.90773L10.832 4.28941C10.7353 4.34471 10.6173 4.34799 10.5176 4.29814L5.34382 1.71126Z" fill="#6E8BBD"/>
@@ -162,9 +167,9 @@
                 </div>
             </div> 
 
-            <div class="absolute inset-0 flex flex-col justify-center items-center -mt-12">
+            <div class="absolute inset-0 flex flex-col justify-center items-center -mt-12 z-20">
                 <!-- Resepsi Date -->
-                <div class="flex flex-col justify-center items-center static mt-40 opacity-0" id="event-resepsi">
+                <div class="flex flex-col justify-center items-center static mt-20 opacity-0" id="event-resepsi">
                     <span class="font-semibold text-brown text-base">Sabtu</span>
                     <div class="flex relative items-center my-1">
                         <span class="absolute left-0 -ml-10 px-1 text-brown font-medium border-y border-brown-light">Juli</span>
@@ -190,7 +195,7 @@
                 <!-- Resepsi Location -->
                 <div class="flex flex-col justify-center items-center mt-2 opacity-0" id="location-resepsi">
                     <span class="text-tosca-light font-semibold text-base">Aula Sudirman Makodam Jaya</span>
-                    <p class="text-tosca-lightest text-sm text-center my-1">Jl. Mayjen Sutoyo No.2, RT.7/RW.7, Cawang, <br /> Kec. Kramat jati, Kota Jakarta Timur, <br />DKI Jakarta 13630</p>
+                    <p class="text-tosca-lightest text-sm text-center my-1">Jl. Mayjen Sutoyo No.5, Cawang, Kramat Jati,<br />Jakarta Timur</p>
                     <button class="bg-tosca py-2 px-4 rounded-lg flex items-center" @click="openResepsiMap">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.16795 1.04392C5.26472 0.988624 5.38271 0.985349 5.4824 1.03519L10.6562 3.62208L15.1679 1.04392C15.2711 0.984966 15.3979 0.985389 15.5006 1.04503C15.6034 1.10467 15.6667 1.21451 15.6667 1.33333V12C15.6667 12.1196 15.6026 12.2301 15.4987 12.2894L10.832 14.9561C10.7353 15.0114 10.6173 15.0147 10.5176 14.9648L5.34382 12.3779L0.832041 14.9561C0.728874 15.015 0.602124 15.0146 0.499353 14.955C0.396581 14.8953 0.333328 14.7855 0.333328 14.6667V4C0.333328 3.88038 0.397424 3.76993 0.501282 3.71059L5.16795 1.04392ZM5.34382 1.71126L0.999995 4.19344V14.0923L5.16795 11.7106C5.26472 11.6553 5.38271 11.652 5.4824 11.7019L10.6562 14.2887L15 11.8066V1.90773L10.832 4.28941C10.7353 4.34471 10.6173 4.34799 10.5176 4.29814L5.34382 1.71126Z" fill="#6E8BBD"/>
@@ -200,28 +205,6 @@
                         <span class="ml-2 text-blue-dark text-sm font-medium">Google Maps</span>
                     </button>
                 </div>
-            </div>
-        </div>
-
-        <!-- Denah -->
-        <div class="panel h-screen flex flex-col justify-start items-center relative w-full" id="denah">
-
-            <span class="name my-16 text-3xl text-brown-darkest font-semibold opacity-0" id="denah-lokasi">Denah Lokasi</span>
-
-            <div class="flex flex-col w-full lg:w-1/2 px-2 mt-20">
-                <div class="box-gift flex flex-col px-1 py-5 rounded-2xl text-blue-darkest w-full opacity-0 mt-20" id="denah-image">
-                    <img :src="denah" alt="denah">
-                </div>
-
-                <div class="flex flex-col mt-10 justify-start items-center pt-6" id="download-denah">
-                    <button class="button-download py-4 px-8 flex items-center rounded-full text-blue-darkest font-semibold" id="simpan-tanggal" @click="downloadDenah">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.5C9.74566 1.5 7.58365 2.39553 5.98959 3.98959C4.39553 5.58365 3.5 7.74566 3.5 10C3.5 13.299 5.63287 16.4271 7.86298 18.7811C8.96781 19.9473 10.0743 20.9004 10.9052 21.562C11.3203 21.8925 11.6655 22.1495 11.906 22.3232C11.9394 22.3473 11.9708 22.3698 12 22.3906C12.0292 22.3698 12.0606 22.3473 12.094 22.3232C12.3345 22.1495 12.6797 21.8925 13.0948 21.562C13.9257 20.9004 15.0322 19.9473 16.137 18.7811C18.3671 16.4271 20.5 13.299 20.5 10C20.5 7.74566 19.6045 5.58365 18.0104 3.98959C16.4163 2.39553 14.2543 1.5 12 1.5ZM12 23C11.7226 23.416 11.7225 23.4159 11.7223 23.4158L11.7218 23.4155L11.7201 23.4143L11.7144 23.4105L11.6933 23.3962C11.675 23.3838 11.6485 23.3657 11.6142 23.3419C11.5458 23.2945 11.4464 23.2248 11.3205 23.1339C11.0689 22.9521 10.711 22.6856 10.2823 22.3443C9.42567 21.6621 8.28219 20.6777 7.13702 19.4689C4.86713 17.0729 2.5 13.701 2.5 10C2.5 7.48044 3.50089 5.06408 5.28249 3.28249C7.06408 1.50089 9.48044 0.5 12 0.5C14.5196 0.5 16.9359 1.50089 18.7175 3.28249C20.4991 5.06408 21.5 7.48044 21.5 10C21.5 13.701 19.1329 17.0729 16.863 19.4689C15.7178 20.6777 14.5743 21.6621 13.7177 22.3443C13.289 22.6856 12.9311 22.9521 12.6795 23.1339C12.5536 23.2248 12.4542 23.2945 12.3858 23.3419C12.3515 23.3657 12.325 23.3838 12.3067 23.3962L12.2856 23.4105L12.2799 23.4143L12.2782 23.4155L12.2777 23.4158C12.2775 23.4159 12.2774 23.416 12 23ZM12 23L12.2774 23.416C12.1094 23.528 11.8906 23.528 11.7226 23.416L12 23Z" fill="#597199"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C10.6193 7.5 9.5 8.61929 9.5 10C9.5 11.3807 10.6193 12.5 12 12.5C13.3807 12.5 14.5 11.3807 14.5 10C14.5 8.61929 13.3807 7.5 12 7.5ZM8.5 10C8.5 8.067 10.067 6.5 12 6.5C13.933 6.5 15.5 8.067 15.5 10C15.5 11.933 13.933 13.5 12 13.5C10.067 13.5 8.5 11.933 8.5 10Z" fill="#597199"/>
-                        </svg>
-                        <span class="ml-3">Unduh Denah Lokasi</span>
-                    </button>
-                </div>                
             </div>
         </div>
 
@@ -285,7 +268,50 @@
                         <span class="mt-1 text-base font-semibold text-brown-darkest">- {{ wish.name }} -</span>
                     </div>
                 </div>
+
             </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="panel bg-tertiary-lightest h-screen flex flex-col justify-center items-center relative w-full" id="gallery">
+
+            <initial colors="#597199" id="initial-gallery" class="opacity-80"></initial>
+
+            <span class="name mt-3 text-3xl text-blue-darkest font-semibold" id="our-gallery">Our Galley</span>
+
+            <div class="flex h-4/5 justify-center items-center mt-8 font-black w-full"> 
+                BELOM ADA 
+            </div>
+
+        </div>
+
+        <!-- Thank You -->
+        <div class="panel bg-tertiary-lightest h-screen flex flex-col justify-center items-center relative w-full" id="thank-you">
+            
+            <div class="flex flex-col h-screen justify-center items-center z-20 opacity-0 w-full lg:w-1/3" id="thank-you-words">
+                <span class="name text-brown text-3xl font-semibold">Terima Kasih</span>
+                <p class="mt-3 px-7 text-brown-lightest text-base text-center">
+                    Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.
+                </p>
+                <span class="mt-2 text-brown-dark font-semibold">Wassalamu‘alaikum Wr Wb</span>
+            </div>
+
+        </div>
+
+
+        <!-- Closing -->
+        <div class="panel bg-blue-darkest h-screen flex flex-col justify-center items-center relative w-full" id="closing">
+
+            <div class="flex flex-col justify-center items-center my-8 text-brown font-semibold z-10 text-lg">
+                <span>Kami yang berbahagia</span>
+                <span >Keluarga Besar</span>
+            </div>
+
+            <div class="text-brown text-lg font-semibold mt-24">
+                 AINUN & ARIEF 
+            </div>
+            <initial colors="#E8CDBC" id="initial-wishes" class="mt-4 opacity-80"></initial>
+        
         </div>
 
     </div>
@@ -298,10 +324,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
+
   export default {
     components:{
         Initial
     }, 
+    
     data() {
         return {
             scrolling :{
@@ -309,6 +337,9 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 events: "scroll,wheel,touchmove,pointermove".split(","),
                 prevent: e => e.preventDefault(),
             },
+            observer : null,
+            scrollTween: null,
+            
             flowerOneSide: new URL('./assets/flower_one_side.png', import.meta.url).href,
             graphic: new URL('./assets/graphic.png', import.meta.url).href,
             graphicWidth: window.innerWidth,
@@ -317,7 +348,9 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             graphicBlueLighter: new URL('./assets/graphic_blue_lighter.png', import.meta.url).href,
             flowerDecor: new URL('./assets/flower_decor.png', import.meta.url).href,
             graphicPlain: new URL('./assets/graphic_plain.png', import.meta.url).href,
-            urlAkadMap: 'https://maps.app.goo.gl/yxwZYYTZCzReixZNA',
+
+            urlAkadMap: 'https://maps.app.goo.gl/7Tma5U5bH5D6Tbc87',
+
             countDownDate : new Date("Jul 20, 2024 10:00:00").getTime(),
             remaining:{
                 days: null,
@@ -326,16 +359,19 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 seconds: null
             },
             urlResepsiMap: 'https://maps.app.goo.gl/7Tma5U5bH5D6Tbc87',
-            denah:  new URL('./assets/photo/denah.png', import.meta.url).href,
-            denahDownload: new URL('./assets/photo/denah_with_bg.png', import.meta.url).href,
+
             giftHeader: new URL('./assets/photo/wed-gift-1.png', import.meta.url).href,
             giftBottom: new URL('./assets/photo/wed-gift-2.png', import.meta.url).href,
+
             border: new URL('./assets/border_wishes.svg', import.meta.url).href,
             namaTamu: '',
             wishes: '',
             queryString: window.location.search,
             listWishes: [],
-            totalWishes: 0
+            totalWishes: 0,
+
+            bgFlower: new URL('./assets/flower_one_color.svg', import.meta.url).href,
+            frameUrl: new URL('./assets/frame.svg', import.meta.url).href,
         }
         
     },
@@ -352,25 +388,56 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 clearInterval(x);
             }
         }, 1000)
+
         this.fetchComments()
+
         setInterval(() => {
             this.fetchComments()
         }, 10000);
+
         let urlParams = new URLSearchParams(this.queryString);
         if( urlParams.has('name') ){
             this.namaTamu = urlParams.get('name');
         }
+
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-        let sections = gsap.utils.toArray(".panel");
-        sections.forEach((eachPanel,i) => {
+
+        let panels = gsap.utils.toArray(".panel");
+        this.observer = ScrollTrigger.normalizeScroll(true)
+        
+        document.addEventListener("touchstart", e => {
+            if (this.scrollTween) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+            }
+        }, {capture: true, passive: false})
+
+        panels.forEach((panel, i) => {
             ScrollTrigger.create({
-                trigger: eachPanel,
-                start: "top bottom-=1",
-                end: "bottom top+=1",
-                onEnter: () => this.goToSection(eachPanel),
-                onEnterBack: () => this.goToSection(eachPanel)
+                trigger: panel,
+                start: "top bottom",
+                end: "+=199%",
+                onToggle: self => self.isActive && !this.scrollTween && this.goToSection(i)
             });
         });
+
+        ScrollTrigger.create({
+            start: 0, 
+            end: "max",
+            snap: 1 / (panels.length - 1)
+        })
+
+        // let sections = gsap.utils.toArray(".panel");
+        // sections.forEach((eachPanel,i) => {
+        //     ScrollTrigger.create({
+        //         trigger: eachPanel,
+        //         start: "top bottom-=1",
+        //         end: "bottom top+=1",
+        //         onEnter: () => this.goToSection(eachPanel),
+        //         onEnterBack: () => this.goToSection(eachPanel)
+        //     });
+        // });
+
         // Ar-Rum transition
         gsap.from(['#flower-left-top', '#flower-right-top'], {
             y: -180,
@@ -378,36 +445,43 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             opacity: 0,
             duration: 1.7
         })
+
         gsap.from(['#flower-left-bottom', '#flower-right-bottom'], {
             y: 180,
             delay: 0.3,
             opacity:0,
             duration: 1.7
         })
+
         gsap.from('#graphic-top-left', {
             x:-180,
             y: -180,
             duration: 1.7
         })
+        
         gsap.from('#graphic-top-right', {
             x: 180,
             y: -180,
             duration: 1.7
         })
+
         gsap.from('#graphic-bottom-left', {
             x: -180,
             y: 180,
             duration: 1.7
         })
+
         gsap.from('#graphic-bottom-right', {
             x: 180,
             y: 180,
             duration: 1.7
         })
+
         gsap.from('#ar-rum', {
             opacity: 0,
             duration: 1.7
         })
+
         // Salam transition
         let tlSalam = gsap.timeline({
             scrollTrigger:{
@@ -417,6 +491,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrub: true
             },
         })
+
         tlSalam.to('#graphic-top-left', {
             xPercent: -50,
             right:"50%",
@@ -424,6 +499,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             yPercent: 10,
             rotate: 60
         }, 0)
+
         tlSalam.to('#graphic-top-right', {
             xPercent: 35,
             yPercent: -50,
@@ -431,12 +507,14 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             bottom:"50%",
             rotate: 90
         }, 0)
+
         tlSalam.to('#graphic-bottom-left', {
             xPercent: -35,
             yPercent: 50,
             bottom:"50%",
             rotate: 90
         }, 0)
+
         tlSalam.to('#graphic-bottom-right', {
             xPercent: -50,
             yPercent: -10,
@@ -444,6 +522,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             left:"50%",
             rotate: 60
         }, 0)
+
         // Couple transition
         let tlCouple = gsap.timeline({
             scrollTrigger:{
@@ -453,38 +532,47 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrub: true
             },
         })
+
         tlCouple.to(['#flower-left-top', '#flower-right-top'], {
             duration: 1.7,
             yPercent: -120,
         })
+
         tlCouple.to(['#flower-left-bottom', '#flower-right-bottom'], {
             duration: 1.7,
             yPercent: 120,
         }, "<")
+
         tlCouple.to('#graphic-top-left', {
             duration: 1.7,
             top: "-100%",
         }, "<")
+
         tlCouple.to('#graphic-top-right', {
             duration: 1.7,
             right: "-100%",
         }, "<")
+
         tlCouple.to('#graphic-bottom-left', {
             duration: 1.7,
             left: "-100%",
         }, "<")
+
         tlCouple.to('#graphic-bottom-right', {
             duration: 1.7,
             bottom: "-100%",
         }, "<")
+
         tlCouple.to("#graphic-blue-lighter-top", {
             duration: 1.7,
             top: "-22%",
         }, "+=0.15")
+
         tlCouple.to("#graphic-blue-lighter-bottom", {
             duration: 1.7,
             bottom: "-22%",
         }, "<")
+
         let tlCoupleInfo = gsap.timeline({
             scrollTrigger:{
                 trigger: '#couple',
@@ -493,6 +581,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 toggleActions: "play none none reverse"
             },
         })
+
         tlCoupleInfo.fromTo('#initial-couple', {
             opacity: 0
         }, {
@@ -501,6 +590,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             immediateRender: false, 
             ease: "back"
         }, 0)
+
         tlCoupleInfo.fromTo('#bride-info', { 
             opacity: 0,
         }, {
@@ -510,6 +600,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             immediateRender: false,
             ease: "power1.inOut"
         }, "-=0.25")
+
         tlCoupleInfo.to('#groom-info', {
             marginRight: 0,
             opacity: 1,
@@ -517,23 +608,27 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             immediateRender: false,
             ease: "power1.inOut"
         }, "<")
+
         tlCoupleInfo.to("#bride-photo", {
             opacity: 1,
             left: 0,
             duration: 1,
             immediateRender: false
         }, "-=1")
+
         tlCoupleInfo.to("#groom-photo", {
             opacity: 1,
             right: 0,
             duration: 1,
             immediateRender: false
         }, "-=1")
+
         tlCoupleInfo.to(["#flower-top-left-bride", "#flower-bottom-right-bride", "#flower-top-left-groom", "#flower-bottom-right-groom"], {
             opacity: 1,
             duration: 0.5,
             immediateRender: false
         }, "-=0.25")
+
         // Akad transition
         let tlAkad = gsap.timeline({
             scrollTrigger:{
@@ -543,9 +638,11 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrub: true
             },
         })
+
         tlAkad.to(['#graphic-plain', '#flower-top'], {
             opacity: 1
         })
+
         gsap.to(['#graphic-blue-lighter-top', '#graphic-blue-lighter-bottom'], {
             scrollTrigger:{
                 trigger: '#akad',
@@ -556,6 +653,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             ease: "none",
             repeat:-1
         })
+
         let tlAkadInfo = gsap.timeline({
             scrollTrigger:{
                 trigger: '#akad',
@@ -564,15 +662,18 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 toggleActions: "play none none reverse"
             },
         })
+
         tlAkadInfo.to('#akad-nikah', {
             duration: 1.2,
             opacity: 1
         })
+
         tlAkadInfo.to('#event-akad', {
             duration: 1.2,
             opacity: 1,
             marginTop: 0
         }, "-=1")
+
         tlAkadInfo.to('#location-akad', {
             duration: 1.2,
             opacity: 1
@@ -587,13 +688,16 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrub: true
             },
         })
+
         tlResepsi.to(['#flower-top', '#akad-nikah', '#event-akad', '#location-akad'], {
             opacity: 0
         })
+
         tlResepsi.to('#graphic-plain', {
             duration: 1.2,
             rotate: -60
         }, "<")  
+
         tlResepsi.to(['#flower-bottom'], {
             opacity: 1
         }, "-=0.5")
@@ -606,56 +710,23 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 toggleActions: "play none none reverse"
             },
         })
+
         tlResepsiInfo.to(['#resepsi-nikah', '#timespan'], {
             duration: 1.2,
             opacity: 1
         })
+
         tlResepsiInfo.to('#event-resepsi', {
             duration: 1.2,
             opacity: 1,
             marginTop: 0
         }, "-=1")
+
         tlResepsiInfo.to('#location-resepsi', {
             duration: 1.2,
             opacity: 1
         }, "-=0.5")
-        // Denah transition
-        let tlDenah = gsap.timeline({
-            scrollTrigger:{
-                trigger: '#denah',
-                start: "top bottom",  
-                end: "bottom bottom", 
-                scrub: true
-            },
-        })
-        tlDenah.to(['#graphic-plain', '#flower-bottom', '#rumagadang'], {
-            opacity: 0
-        })
-        tlDenah.to('#graphic-blue-lighter-top', {
-            duration: 1.7,
-            top: "-66.66%",
-            rotation: "0",
-        }, "<")
-        tlDenah.to('#graphic-blue-lighter-bottom', {
-            duration: 1.7,
-            bottom: "-66.66%",
-            rotation: "0",
-        }, "<")
-        tlDenah.to('#denah-lokasi', {
-            // duration: 1.7,
-            opacity: 1
-        }, ">")
-        gsap.to(['#denah-image', '#download-denah'], {
-            scrollTrigger:{
-                trigger: '#denah-image',
-                start: "top center", 
-                end: "+=100%",
-                toggleActions: "play none none reverse"  
-            },
-            duration: 1.2,
-            opacity: 1,
-            marginTop: 0,
-        })
+
         // Gift transition
         let tlGift = gsap.timeline({
             scrollTrigger:{
@@ -665,14 +736,34 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrub: true
             },
         })
+
+        tlGift.to(['#graphic-plain', '#flower-bottom', '#rumagadang'], {
+            duration: 1.7,
+            opacity: 0
+        })
+
+        tlGift.to('#graphic-blue-lighter-top', {
+            duration: 1.7,
+            top: "-66.66%",
+            rotation: "0",
+        }, "<")
+
+        tlGift.to('#graphic-blue-lighter-bottom', {
+            duration: 1.7,
+            bottom: "-66.66%",
+            rotation: "0",
+        }, "<")
+
         tlGift.to("#flower-left-top",{
             yPercent: 35,
             duration: 2
         }, "+=0.5")
+
         tlGift.to("#flower-right-bottom",{
             yPercent: -35,
             duration: 2
         }, "<")
+
         let tlGiftInfo = gsap.timeline({
             scrollTrigger:{
                 trigger: '#gift',
@@ -681,12 +772,14 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 toggleActions: "play none none reverse"
             },
         })
+
         tlGiftInfo.to(["#gift-header", "#gift-footer"], {
             left: 0,
             right: 0,
             opacity: 1,
             duration: 1.2
         })
+
         tlGiftInfo.to(["#gift-header-photo", "#gift-footer-photo"], {
             opacity: 1,
             duration: 1.2
@@ -697,11 +790,13 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             backdropFilter: "blur(10px)",
             duration: 1.2
         }, "<")
+
         tlGiftInfo.to(["#wedding-gift", "#gift-ins", "#gift-info"], {
             opacity: 1,
             zIndex: 20,
             duration: 0.7,
         }, "-=0.15")
+
         tlGiftInfo.to("#gift-info", {
             duration: 0.7,
             backdropFilter: "blur(10px)",
@@ -716,42 +811,204 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 scrub: true
             },
         })
+
         tlWishes.to("#flower-left-top",{
             yPercent: -100,
             duration: 1.7
         })
+
         tlWishes.to("#flower-right-bottom",{
             yPercent: 100,
             duration: 1.7
         }, "<")
+
         tlWishes.to("#flower-left-corner",{
             opacity: 0.5,
             y: 40,
             x: 40,
             duration: 1.7
         }, "+=0.25")
+
         tlWishes.to("#flower-right-corner",{
             opacity: 0.5,
             y: -40,
             x: -40,
             duration: 1.7
         }, "<")
+
+        // Gallery transition
+        let tlGallery = gsap.timeline({
+            scrollTrigger:{
+                trigger: '#gallery',
+                start: "top bottom",  
+                end: "bottom bottom", 
+                scrub: true
+            },
+        })
+
+        tlGallery.to("#flower-left-corner", {
+            opacity: 0,
+            y: -40,
+            x: -40,
+            duration: 1.7
+        })
+
+        tlGallery.to("#flower-right-corner", {
+            opacity: 0,
+            y: 40,
+            x: 40,
+            duration: 1.7
+        }, "<")
+
+        tlGallery.to("#flower-left-top", {
+            yPercent: 80,
+            xPercent: -15,
+            duration: 1.7
+        })
+
+        tlGallery.to("#flower-right-top", {
+            yPercent: 80,
+            xPercent: 15,
+            duration: 1.7
+        }, "<")
+
+        // Thank You transition
+        let tlThankYou = gsap.timeline({
+            scrollTrigger:{
+                trigger: '#thank-you',
+                start: "top bottom",  
+                end: "bottom bottom", 
+                scrub: true
+            },
+        })
+
+        tlThankYou.to("#flower-left-top", {
+            xPercent: -100,
+            duration: 1.7
+        })
+
+        tlThankYou.to("#flower-right-top", {
+            xPercent: 100,
+            duration: 1.7
+        }, "<")
+
+        tlThankYou.to(["#graphic-plain", "#flower-top", "#flower-bottom", "#thank-you-words"], {
+            opacity: 1,
+            duration: 1.7
+        }, "+=0.5")
+
+        tlThankYou.to(["#rumagadang"], {
+            opacity: 0.2,
+            duration: 1.7
+        }, "<")
+
+        tlThankYou.to('#graphic-blue-lighter-top', {
+            duration: 1.7,
+            top: "-22%",
+        }, "<")
+
+        tlThankYou.to('#graphic-blue-lighter-bottom', {
+            duration: 1.7,
+            bottom: "-22%",
+        }, "<")
+
+        // Closing transition
+        let tlClosing = gsap.timeline({
+            scrollTrigger:{
+                trigger: '#closing',
+                start: "top bottom",  
+                end: "bottom bottom", 
+                scrub: true
+            },
+        })
+
+        tlClosing.to('#graphic-blue-lighter-top', {
+            duration: 1.7,
+            top: "-66%",
+        })
+
+        tlClosing.to('#graphic-blue-lighter-bottom', {
+            duration: 1.7,
+            bottom: "-66%",
+        }, "<")
+
+        tlClosing.to(["#graphic-plain", "#flower-top", "#flower-bottom"], {
+            opacity: 0,
+            duration: 1.7
+        }, "<")
+
+        tlClosing.to('#bg-flower-top-left', {
+            duration: 1.7,
+            opacity: 1,
+            top: -50,
+            left: -50
+        }, ">")
+
+        tlClosing.to('#bg-flower-bottom-right', {
+            duration: 1.7,
+            opacity: 1,
+            bottom: -50,
+            right: -50
+        }, "<")
+
+        tlClosing.to('#flower-left-corner', {
+            duration: 1.7,
+            opacity: 1,
+            top: 0,
+            left: 0
+        }, "<")
+
+        tlClosing.to('#flower-right-corner', {
+            duration: 1.7,
+            opacity: 1,
+            bottom: 0,
+            right: 0
+        }, "<")
+
+        tlClosing.to('#frame', {
+            duration: 1.7,
+            opacity: 1,
+        }, "<")
+
+        
+
     },
     methods:{
-        goToSection(section) {
-        if (this.scrolling.enabled) {
-          this.disableScroll();
-          gsap.to(window, {
-          scrollTo: {
-              y: section,
-              // y: isBack && i===0 ? sections[0].offsetTop : sections[i+1]?.offsetTop, // Scroll to the top of the panel
-              autoKill: false
-          },
-          onComplete: this.enableScroll,
-          duration: 1
-          });
-        }
-      },
+        openIG(user){
+            const a = document.createElement("a");
+            let url = `https://www.instagram.com/${user}`
+            a.setAttribute('href', url);
+            a.setAttribute('target', '_blank');
+            a.click()
+        },
+
+        goToSection(i) {
+            this.scrollTween = gsap.to(window, {
+                scrollTo: {y: i * innerHeight, autoKill: false},
+                onStart: () => {
+                    this.observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
+                    this.observer.enable();
+                },
+                duration: 1,
+                onComplete: () => this.scrollTween = null,
+                overwrite: true
+            });
+        },
+    //     goToSection(section) {
+    //     if (this.scrolling.enabled) {
+    //       this.disableScroll();
+    //       gsap.to(window, {
+    //       scrollTo: {
+    //           y: section,
+    //           // y: isBack && i===0 ? sections[0].offsetTop : sections[i+1]?.offsetTop, // Scroll to the top of the panel
+    //           autoKill: false
+    //       },
+    //       onComplete: this.enableScroll,
+    //       duration: 1
+    //       });
+    //     }
+    //   },
+
       disableScroll() {
         if (this.scrolling.enabled) {
           this.scrolling.enabled = false;
@@ -759,6 +1016,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
           this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
         }
       },
+
       enableScroll() {
         if (!this.scrolling.enabled) {
           this.scrolling.enabled = true;
@@ -768,6 +1026,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
           );
         }
       },
+
       openAkadMap() {
             // window.open(this.urlAkadMap, '_blank').focus();
             const a = document.createElement("a");
@@ -775,20 +1034,14 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             a.setAttribute('target', '_blank');
             a.click();
         },
+
         openResepsiMap(){
             const a = document.createElement("a");
             a.setAttribute('href', this.urlResepsiMap);
             a.setAttribute('target', '_blank');
             a.click();
         },
-        downloadDenah(){
-            const link = document.createElement('a')
-            link.href = this.denahDownload
-            link.download = 'Denah Lokasi.png'
-            document.body.appendChild(link)
-            link.click()
-            document.body.removeChild(link)
-        },
+
         fetchComments() {
             let promise = databases.listDocuments(DATABASE_ID, COLLECTION_ID);
             promise.then((res) => {
@@ -800,6 +1053,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
                 }
             );
         },
+
         sendWishes(){
             if(this.namaTamu === '' || this.wishes === ''){
                 return
@@ -823,49 +1077,60 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
     }
   }
 </script>
+
 <style scoped>
 .flip-verticaly {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
 .flip-and-rotate {
     -webkit-transform: rotate(180deg) scaleX(-1);
     transform: rotate(180deg) scaleX(-1);
 }
+
 .bg-brides {
     background-image:  url("Bride.png");;
 }
+
 .bg-groom {
     background-image:  url("Groom.png");;
 }
+
 .button-download {
     background: linear-gradient(266deg, #EFBFEF 0%, #D698D6 101.13%);
     border: 3px solid #E8CDBC;
     box-shadow: 0px 8px 16px 0px rgba(8, 43, 75, 0.16);
 }
+
 .box-gift {
     border: 1px solid rgba(136, 172, 233, 0.60);
     background: linear-gradient(123deg, rgba(89, 113, 153, 0.20) 21.82%, rgba(89, 113, 153, 0.10) 71.63%);
     box-shadow: 0px 4px 24px -1px rgba(136, 172, 233, 0.20);
     backdrop-filter: blur(10px);
 }
+
 .rounded-br-10xl {
     border-bottom-right-radius: 5rem;
 }
+
 .rounded-tl-10xl {
     border-top-left-radius: 5rem;
 }
 .bg-field{
     background-color: rgba(255, 255, 255, 0.6);
 }
+
 .bg-wishes{
     background-color: rgba(255, 237, 255, 0.2);
 }
+
 #send-wishes {
     border-radius: 62.4375rem;
     border: 3px solid #E8CDBC;  
     background: linear-gradient(266deg, #B1D4E3 -3.39%, #8AACBA 102.73%);
 }
+
 @media (min-width: 1024px) {
     .graphic-corner {
         width: 450px;
@@ -879,6 +1144,7 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
         bottom: -60%;
     } */
 }
+
 @media (max-width: 1024px) {
     /* #graphic-blue-lighter-top {
         top: -60%;
