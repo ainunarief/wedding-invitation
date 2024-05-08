@@ -2,7 +2,7 @@
   <Loading v-if="isLoading"></Loading>
 
   <div v-else>
-    <img :src="rumagadang" alt="rumagadang" width="170" class="fixed inset-0 m-auto opacity-20 z-10" id="rumagadang">
+    <img :src="rumagadang" alt="rumagadang" width="170" class="fixed inset-0 m-auto opacity-20 z-20" id="rumagadang">
 
     <cover @closeCover="closeCover" v-if="showCover"></cover>
 
