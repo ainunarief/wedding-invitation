@@ -27,7 +27,7 @@
                     <span class="font-semibold text-brown">KEPADA YTH</span>
                     <span class="font-semibold text-brown">Bapak/Ibu/Saudara/i,</span>
                     <span class="font-semibold text-tosca-light my-3 text-lg">{{ namaTamu }}</span>
-                    <button id="open-invitation" class="py-4 px-16 font-semibold text-brown-lightest" @click="closeCover">Buka Undangan</button>
+                    <button id="open-invitation" class="py-4 px-16 font-semibold text-gray-lightest" @click="closeCover">Buka Undangan</button>
                 </div>
             </div>
             
@@ -52,8 +52,8 @@ export default {
             rumagadang: new URL('./assets/rumagadang.png', import.meta.url).href,
             frameUrl: new URL('./assets/frame.svg', import.meta.url).href,
             bgFlower: new URL('./assets/flower_one_color.svg', import.meta.url).href,
-            flowerTopLeft: new URL('./assets/flower_left_corner.png', import.meta.url).href,
-            flowerBottomRight: new URL('./assets/flower_right_corner.png', import.meta.url).href,
+            flowerTopLeft: new URL('./assets/flower_left_corner.webp', import.meta.url).href,
+            flowerBottomRight: new URL('./assets/flower_right_corner.webp', import.meta.url).href,
             namaTamu: '',
             queryString: window.location.search
         }
@@ -177,7 +177,8 @@ export default {
 #open-invitation {
     border-radius: 62.4375rem;
     border: 3px solid #E8CDBC;  
-    background: linear-gradient(266deg, #B1D4E3 -3.39%, #8AACBA 102.73%);
+    background: linear-gradient(266deg, #E5ABB5 -3.39%, #782D41 102.73%);
+    box-shadow: 0px 8px 16px 0px rgba(188,166,152,0.16);
 }
 
 .name{

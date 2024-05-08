@@ -14,6 +14,14 @@ export default {
         lightest : '#E5F2FF'
       },
 
+      'red': {
+        darkest : '#5E2131',
+        dark : '#782D41',
+        DEFAULT : '#A95576',
+        light : '#E5ABB5',
+        lightest : '#F6EBED'
+      },
+
       'brown': {
         darkest : '#98877B',
         dark : '#BCA698',
@@ -39,11 +47,11 @@ export default {
       },
 
       'gray': {
-        darkest : '#333333',
-        dark : '#525252',
-        DEFAULT : '#666666',
-        light : '#AAAAAA',
-        lightest : '#E9ECEF'
+        darkest : '#867F7F',
+        dark : '#BBB6B6',
+        DEFAULT : '#D0CBCB',
+        light : '#E2DFDF',
+        lightest : '#F0EFEF'
       }
     },
     extend: {
