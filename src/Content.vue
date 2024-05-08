@@ -241,7 +241,7 @@
         </div>
 
         <!-- Wishes -->
-        <div class="panel bg-red-lightest h-screen flex flex-col justify-center items-center relative w-full" id="wishes">
+        <div class="panel bg-red-lightest h-screen flex flex-col justify-center items-center relative w-full z-30" id="wishes">
             <div class="flex flex-col items-center my-5 z-20 w-full lg:w-1/2 px-6">
                 <initial colors="#5E2131" id="initial-wishes" class="opacity-80"></initial>
 
@@ -260,7 +260,7 @@
                 <img :src="border" alt="border" class="my-2 w-full" height="18" id="border">
 
                 <!-- wishes -->
-                <div class="w-full overflow-y-auto h-96 flex flex-col" id="list-wishes">
+                <div class="w-full overflow-y-auto h-96 flex flex-col z-20" id="list-wishes">
                     <div 
                         class="flex flex-col w-full p-2 border border-red-light border-2 bg-wishes backdrop-blur rounded-xl mb-2"
                         v-for="wish in listWishes">
@@ -403,48 +403,46 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
         let panels = gsap.utils.toArray(".panel");
-        this.observer = ScrollTrigger.normalizeScroll(true)
+        // this.observer = ScrollTrigger.normalizeScroll(true)
         
-        document.addEventListener("touchstart", e => {
-            // console.log(this.scrollTween);
-            // console.log(e);
-            if (this.scrollTween) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-            }
-        }, {capture: true, passive: false})
+        // // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
+        // document.addEventListener("touchstart", e => {
+        //     if (this.scrollTween) {
+        //         e.preventDefault();
+        //         e.stopImmediatePropagation();
+        //     }
+        // }, {capture: true, passive: false})
 
-        panels.forEach((panel, i) => {
-            ScrollTrigger.create({
-                trigger: panel,
-                start: "top bottom",
-                end: "+=199%",
-                onToggle: self => {
-                    console.log("onToggle", self);
-                    self.isActive && !this.scrollTween && this.goToSection(i)
-                },
-                // onUpdate: self => {
-                //     console.log("onUpdate", self.trigger.offsetParent);
-                // }
-            });
-        });
-
-        ScrollTrigger.create({
-            start: 0, 
-            end: "max",
-            snap: 1 / (panels.length - 1)
-        })
-
-        // let sections = gsap.utils.toArray(".panel");
-        // sections.forEach((eachPanel,i) => {
+        // panels.forEach((panel, i) => {
         //     ScrollTrigger.create({
-        //         trigger: eachPanel,
-        //         start: "top bottom-=1",
-        //         end: "bottom top+=1",
-        //         onEnter: () => this.goToSection(eachPanel),
-        //         onEnterBack: () => this.goToSection(eachPanel)
+        //         trigger: panel,
+        //         start: "top bottom",
+        //         end: "+=199%",
+        //         onToggle: self => {
+        //             console.log("onToggle", self);
+        //             self.isActive && !this.scrollTween && this.goToSection(i)
+        //         },
         //     });
         // });
+
+        // // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes)
+        // ScrollTrigger.create({
+        //     start: 0, 
+        //     end: "max",
+        //     snap: 1 / (panels.length - 1)
+        // })
+
+        let sections = gsap.utils.toArray(".panel");
+        sections.forEach((eachPanel,i) => {
+            ScrollTrigger.create({
+                trigger: eachPanel,
+                start: "top bottom-=1",
+                end: "bottom top+=1",
+                onEnter: () => this.goToSection(eachPanel),
+                onEnterBack: () => this.goToSection(eachPanel),
+                // markers: true
+            });
+        });
 
         // Ar-Rum transition
         gsap.from(['#flower-left-top', '#flower-right-top'], {
@@ -990,50 +988,57 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             a.click()
         },
 
-        goToSection(i) {
-            console.log(i);
-            this.scrollTween = gsap.to(window, {
-                scrollTo: {y: i * innerHeight, autoKill: false},
-                onStart: () => {
-                    this.observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-                    this.observer.enable();
-                },
-                duration: 1,
-                onComplete: () => this.scrollTween = null,
-                overwrite: true
-            });
-        },
-    //     goToSection(section) {
-    //     if (this.scrolling.enabled) {
-    //       this.disableScroll();
-    //       gsap.to(window, {
-    //       scrollTo: {
-    //           y: section,
-    //           // y: isBack && i===0 ? sections[0].offsetTop : sections[i+1]?.offsetTop, // Scroll to the top of the panel
-    //           autoKill: false
-    //       },
-    //       onComplete: this.enableScroll,
-    //       duration: 1
-    //       });
-    //     }
-    //   },
+        // goToSection(i) {
+        //     console.log(i);
+        //     this.scrollTween = gsap.to(window, {
+        //         scrollTo: {y: i * innerHeight, autoKill: false},
+        //         onStart: () => {
+        //             this.observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
+        //             this.observer.enable();
+        //         },
+        //         duration: 1,
+        //         onComplete: () => this.scrollTween = null,
+        //         overwrite: true
+        //     });
+        // },
 
-      disableScroll() {
+        goToSection(section) {
         if (this.scrolling.enabled) {
-          this.scrolling.enabled = false;
-          window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
-          this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+          this.disableScroll();
+          gsap.to(window, {
+          scrollTo: {
+              y: section,
+              // y: isBack && i===0 ? sections[0].offsetTop : sections[i+1]?.offsetTop, // Scroll to the top of the panel
+              autoKill: false
+          },
+          onComplete: this.enableScroll,
+          duration: 1
+          });
         }
       },
 
+      disableScroll() {
+        // setTimeout(() => {
+            if (this.scrolling.enabled) {
+                this.scrolling.enabled = false;
+                window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+                this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+            }
+        // }, 700)
+        
+      },
+
       enableScroll() {
-        if (!this.scrolling.enabled) {
-          this.scrolling.enabled = true;
-          window.removeEventListener("scroll", gsap.ticker.tick);
-          this.scrolling.events.forEach((e, i) =>
-          (i ? document : window).removeEventListener(e, this.scrolling.prevent)
-          );
-        }
+        setTimeout(() => {
+            if (!this.scrolling.enabled) {
+                this.scrolling.enabled = true;
+                window.removeEventListener("scroll", gsap.ticker.tick);
+                this.scrolling.events.forEach((e, i) =>
+                (i ? document : window).removeEventListener(e, this.scrolling.prevent)
+                );
+            }
+        }, "1 second")
+        
       },
 
       openAkadMap() {
