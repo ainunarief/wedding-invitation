@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 148 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-6715.77,-4140.13)">
+        <g transform="matrix(-0.999822,-0.0188613,0.0188613,-0.999822,13504.3,8567.48)">
+            <g transform="matrix(-0.248652,0.968593,-0.968593,-0.248652,12654.2,-1356.55)">
+                <text x="6853.26px" y="4229.74px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">B</text>
+            </g>
+            <g transform="matrix(-0.519441,0.854506,-0.854506,-0.519441,14035,600.731)">
+                <text x="6848.6px" y="4246.9px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">a</text>
+            </g>
+            <g transform="matrix(-0.753854,0.657042,-0.657042,-0.753854,14794.2,2983.39)">
+                <text x="6838.26px" y="4262.85px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">c</text>
+            </g>
+            <g transform="matrix(-0.909195,0.41637,-0.41637,-0.909195,14810.4,5317.65)">
+                <text x="6825.34px" y="4273.8px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">k</text>
+            </g>
+            <g transform="matrix(-0.998328,0.0578109,-0.0578109,-0.998328,13844.2,8163.31)">
+                <text x="6804.02px" y="4281.91px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">T</text>
+            </g>
+            <g transform="matrix(-0.975024,-0.222101,0.222101,-0.975024,12455.3,9966.07)">
+                <text x="6788.03px" y="4282.7px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">o</text>
+            </g>
+            <g transform="matrix(-0.807419,-0.589979,0.589979,-0.807419,9703.32,11717.6)">
+                <text x="6764.1px" y="4275.12px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">T</text>
+            </g>
+            <g transform="matrix(-0.612087,-0.79079,0.79079,-0.612087,7510.45,12215.3)">
+                <text x="6751.26px" y="4265.57px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">o</text>
+            </g>
+            <g transform="matrix(-0.332464,-0.943116,0.943116,-0.332464,4971.94,12021.3)">
+                <text x="6740.28px" y="4251.06px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">p</text>
+            </g>
+        </g>
+        <g transform="matrix(1.31026,0,0,1.31026,-2090.32,-1296.44)">
+            <circle cx="6778.75" cy="4208.09" r="38.311" style="fill:rgb(232,205,188);"/>
+        </g>
+        <g transform="matrix(0.748954,0,0,0.748954,1661.19,1019.22)">
+            <g transform="matrix(4.16667,0,0,4.16667,6800.04,4219.99)">
+                <path d="M12,4.74C12.276,4.74 12.74,4.964 12.74,5.24L12.74,19C12.74,19.276 12.276,19.5 12,19.5C11.724,19.5 11.26,19.276 11.26,19L11.26,5.24C11.26,4.964 11.724,4.74 12,4.74Z" style="fill:rgb(94,33,49);"/>
+            </g>
+            <g transform="matrix(4.16667,0,0,4.16667,6800.04,4219.99)">
+                <path d="M11.646,4.646C11.842,4.451 12.158,4.451 12.354,4.646L19.354,11.646C19.549,11.842 19.693,12.424 19.498,12.619C19.303,12.815 18.842,13.029 18.646,12.834L12,6.187L5.354,12.834C5.158,13.029 4.758,12.828 4.563,12.633C4.367,12.437 4.451,11.842 4.646,11.646L11.646,4.646Z" style="fill:rgb(94,33,49);"/>
+            </g>
+        </g>
+    </g>
+</svg>
