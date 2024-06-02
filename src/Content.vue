@@ -18,7 +18,7 @@
 
     <img :src="flowerDecor" alt="flower-bottom" class="fixed inset-0 m-auto -bottom-80 w-full lg:w-1/3 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
 
-    <img :src="frameUrl" alt="frame" class="fixed h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
+    <img :src="frameUrl" alt="frame" class="fixed h-screen inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
 
     <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed -left-28 -top-28 z-10 opacity-0" id="bg-flower-top-left">
     <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed -right-28 -bottom-28 z-10 rotate-180 opacity-0" id="bg-flower-bottom-right">
@@ -209,7 +209,7 @@
         </div>
 
         <!-- Gift -->
-        <div class="panel bg-red-lightest h-screen flex flex-col justify-center items-center relative w-full" id="gift">
+        <div class="panel bg-red-lightest h-screen flex flex-col justify-start pt-52 items-center relative w-full" id="gift">
             <!-- Gift Header -->
             <div class="absolute top-0 w-full z-20 -left-40 opacity-0" id="gift-header">
                 <div id="rectangle-top" class="box-gift top-0 absolute w-full h-44 rounded-br-10xl z-20"></div>
@@ -220,9 +220,68 @@
             <div class="flex flex-col justify-center items-center mx-6 z-10">
                 <span class="name text-3xl text-red-darkest font-semibold opacity-0" id="wedding-gift" >Wedding Gift</span>
 
-                <p class="text-red-darkest font-medium text-center my-7 lg:w-1/3 z-30 opacity-0" id="gift-ins">
+                <p class="text-red-darkest font-medium text-center my-6 lg:w-1/3 z-30 opacity-0" id="gift-ins">
                     Bagi bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui rekening di bawah ini:
                 </p>
+
+                <!-- <div class="w-full px-5 mx-auto relative" style="scroll-snap-type: x mandatory;">
+                    <div class="">
+                        <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+                        <div  class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                            <div class="box-gift  rounded-lg p-5 text-blue-darkest w-full">
+                                <span class="font-bold">Mandiri</span>
+                                <div class="flex my-2">
+                                    <span class="text-lg font-semibold">108 477 2413</span>
+                                </div>
+                                <span class="font-semibold">a.n Ainun Rahmania</span>
+                            </div>
+                            <div class="absolute top-1/2 w-full flex justify-between z-20">
+                                <label for="carousel-2" class="inline-block text-red cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                                    </svg>
+                                </label>
+                                <label for="carousel-2" class="inline-block text-red cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" />
+                        <div  class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                            <div class="box-gift  rounded-lg p-5 text-blue-darkest w-full">
+                                <span class="font-bold">BCA</span>
+                                <div class="flex my-2">
+                                    <span class="text-lg font-semibold">108 477 2413</span>
+                                </div>
+                                <span class="font-semibold">a.n Arief Trifianto Nurichsan</span>
+                            </div>
+                            <div class="absolute top-1/2 w-full flex justify-between z-20">
+                                <label for="carousel-1" class="inline-block text-blue-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                                    </svg>
+                                </label>
+                                <label for="carousel-1" class="inline-block text-blue-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="box-gift flex flex-col p-5 rounded-2xl text-blue-darkest w-full lg:w-1/3 opacity-0 mb-5" id="gift-info">
+                    <span class="font-bold">Bank Mandiri</span>
+                    <div class="flex my-2">
+                        <span class="text-lg font-semibold">101 000 7248 253</span>
+                    </div>
+                    <span class="font-semibold">a.n Ainun Rahmania</span>
+                </div> 
 
                 <div class="box-gift flex flex-col p-5 rounded-2xl text-blue-darkest w-full lg:w-1/3  opacity-0" id="gift-info">
                     <span class="font-bold">BCA</span>
@@ -255,7 +314,29 @@
                     class="my-3 w-full p-3 bg-field border border-blue rounded-lg focus:ring-1 focus:outline-none focus:border-red-dark text-blue-darkest">
                 </textarea>
 
-                <button id="send-wishes" class="w-full py-3 font-semibold text-gray-lightest" @click="sendWishes">Kirim</button>
+                <div class="flex flex-col w-full items-start">
+                    <span class="text-red">Apakah Anda Berkenan Hadir?</span>
+                    <div class="flex items-center">
+                        <input type="radio" id="true" value="true" v-model="hadir" class="mr-1"/>
+                        <label for="true">Ya</label>
+
+                        <input type="radio" id="false" value="false" v-model="hadir" class="ml-3 mr-1"/>
+                        <label for="false">Tidak</label>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full items-start mt-1">
+                    <span class="text-red">Jumlah Tamu</span>
+                    <div class="flex items-center">
+                        <input type="radio" id="1" value="1" v-model="jumlah" class="mr-1"/>
+                        <label for="1">1</label>
+
+                        <input type="radio" id="2" value="2" v-model="jumlah" class="ml-3 mr-1"/>
+                        <label for="2">2</label>
+                    </div>
+                </div>
+
+                <button id="send-wishes" class="w-full mt-1 py-3 font-semibold text-gray-lightest" @click="sendWishes">Kirim</button>
 
                 <img :src="border" alt="border" class="my-2 w-full" height="18" id="border">
 
@@ -279,8 +360,19 @@
 
             <span class="name mt-3 text-3xl text-red-darkest font-semibold" id="our-gallery">Our Galley</span>
 
-            <div class="flex h-4/5 justify-center items-center mt-8 font-black w-full"> 
-                BELOM ADA 
+            <div class="flex flex-col h-4/5 justify-center items-center mt-8 font-black w-full lg:w-1/2 z-30"> 
+                <!-- <div :style="{ backgroundImage: `${photoShowed.image}` }"> -->
+                    <div class="px-3 h-2/3 lg:h-4/5 flex">
+                        <img :src="photoShowed.url" alt="photoShowed" id="photo-showed" class="block m-auto max-w-full max-h-full">
+                    </div>
+                    <div class="mt-6 flex h-20 overflow-x-auto px-3">
+                        <div v-for="(photo, i) in gallery" class="flex-none h-full w-auto mr-3 cursor-pointer" :id="i" @click="chosePhoto(photo)">
+                            <img :src="photo.url" class="h-full w-full">
+                        </div>
+                    </div>
+                    
+                <!-- </div> -->
+                
             </div>
 
         </div>
@@ -366,12 +458,30 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
             border: new URL('./assets/border_wishes.svg', import.meta.url).href,
             namaTamu: '',
             wishes: '',
+            hadir: true,
+            jumlah: 1,
             queryString: window.location.search,
             listWishes: [],
             totalWishes: 0,
 
             bgFlower: new URL('./assets/flower_one_color.svg', import.meta.url).href,
             frameUrl: new URL('./assets/frame.svg', import.meta.url).href,
+
+            photoShowed: { id: '1', url: './src/assets/photo/gallery/1.webp', image: new URL('./assets/photo/gallery/1.webp', import.meta.url).href },
+            gallery: [
+                { id: '1', url: new URL('./assets/photo/gallery/1.webp', import.meta.url).href },
+                { id: '2', url: new URL('./assets/photo/gallery/2.webp', import.meta.url).href },
+                { id: '3', url: new URL('./assets/photo/gallery/3.webp', import.meta.url).href },
+                { id: '4', url: new URL('./assets/photo/gallery/4.webp', import.meta.url).href },
+                { id: '5', url: new URL('./assets/photo/gallery/1.webp', import.meta.url).href },
+                { id: '6', url: new URL('./assets/photo/gallery/2.webp', import.meta.url).href },
+                { id: '7', url: new URL('./assets/photo/gallery/3.webp', import.meta.url).href },
+                { id: '8', url: new URL('./assets/photo/gallery/4.webp', import.meta.url).href },
+                { id: '9', url: new URL('./assets/photo/gallery/1.webp', import.meta.url).href },
+                { id: '10', url: new URL('./assets/photo/gallery/2.webp', import.meta.url).href },
+                { id: '11', url: new URL('./assets/photo/gallery/3.webp', import.meta.url).href },
+                { id: '12', url: new URL('./assets/photo/gallery/4.webp', import.meta.url).href },
+            ]
         }
         
     },
@@ -982,6 +1092,10 @@ import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
 
     },
     methods:{
+        chosePhoto(photo) {
+            this.photoShowed = photo
+        },
+
         openIG(user){
             const a = document.createElement("a");
             let url = `https://www.instagram.com/${user}`

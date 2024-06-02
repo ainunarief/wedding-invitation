@@ -1,6 +1,6 @@
 <template>
-    <div id="cover" class="h-dvh">
-        <img :src="frameUrl" alt="frame" class="absolute h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10" id="frame">
+    <div id="cover" class="h-screen">
+        <img :src="frameUrl" alt="frame" class="absolute h-screen inset-0 m-auto flex justify-center items-center p-2 z-10" id="frame">
 
         <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed z-10" id="bg-flower-top-left">
         <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed z-10 rotate-180 right-0 bottom-0" id="bg-flower-bottom-right">
@@ -8,8 +8,8 @@
         <img :src="flowerTopLeft" alt="flower-topleft" width="500" class="fixed z-10 w-80 lg:w-128" id="flower-top-left">
         <img :src="flowerBottomRight" alt="flower-bottomright" class="fixed z-10 right-0 bottom-0 w-80 lg:w-128" id="flower-bottom-right">
 
-        <div class="relative h-dvh w-full bg-blue-darkest ">
-            <div class="z-20 relative h-dvh flex flex-col justify-between items-center text-base">
+        <div class="relative h-screen w-full bg-blue-darkest ">
+            <div class="z-20 relative h-screen flex flex-col justify-between items-center text-base">
                 <div class="flex flex-col items-center mt-32 pt-6">
                     <initial colors="#E3F4FB" id="initial"></initial>
                     <div class="flex flex-col" id="title">
