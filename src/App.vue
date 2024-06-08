@@ -50,11 +50,27 @@
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 .name{
     font-family: 'Dancing Script', serif;
 }
 
 body {
   @apply bg-blue-lightest;
+  /* white-space:pre-wrap;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100% */
 }
+
+/* #app {
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:scroll;
+} */
 </style>
