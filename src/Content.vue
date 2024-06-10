@@ -1,113 +1,118 @@
 <template>
-    <img :src="flowerOneSide" alt="flower-left-top" class="fixed -left-7 -top-5 opacity-50 z-10" width="190" id="flower-left-top" fetchpriority="high">
-    <img :src="flowerOneSide" alt="flower-right-top" class="fixed -right-7 -top-5 opacity-50 flip-verticaly z-10" width="190" id="flower-right-top" fetchpriority="high">
-    <img :src="flowerOneSide" alt="flower-left-bottom" class="fixed -left-7 -bottom-5 opacity-50 flip-and-rotate z-10" width="190" id="flower-left-bottom" fetchpriority="high">
-    <img :src="flowerOneSide" alt="flower-right-bottom" class="fixed -right-7 -bottom-5 opacity-50 rotate-180 z-10" width="190" id="flower-right-bottom" fetchpriority="high">
+    <!-- <div class="fixed flex w-full h-screen"> -->
+        <img :src="flowerOneSide" alt="flower-left-top" class="fixed -left-7 -top-5 opacity-50 z-10" width="190" id="flower-left-top" fetchpriority="high">
+        <img :src="flowerOneSide" alt="flower-right-top" class="fixed -right-7 -top-5 opacity-50 flip-verticaly z-10" width="190" id="flower-right-top" fetchpriority="high">
+        <img :src="flowerOneSide" alt="flower-left-bottom" class="fixed -left-7 -bottom-5 opacity-50 flip-and-rotate z-10" width="190" id="flower-left-bottom" fetchpriority="high">
+        <img :src="flowerOneSide" alt="flower-right-bottom" class="fixed -right-7 -bottom-5 opacity-50 rotate-180 z-10" width="190" id="flower-right-bottom" fetchpriority="high">
 
-    <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -left-52 -top-64" :width="graphicWidth" id="graphic-top-left">
-    <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -right-52 -top-64" :width="graphicWidth" id="graphic-top-right">
-    <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -left-52 -bottom-64" :width="graphicWidth" id="graphic-bottom-left">
-    <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -right-52 -bottom-64" :width="graphicWidth" id="graphic-bottom-right">
+        <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -left-52 -top-64" :width="graphicWidth" id="graphic-top-left">
+        <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -right-52 -top-64" :width="graphicWidth" id="graphic-top-right">
+        <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -left-52 -bottom-64" :width="graphicWidth" id="graphic-bottom-left">
+        <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -right-52 -bottom-64" :width="graphicWidth" id="graphic-bottom-right">
 
-    <img :src="graphicBlueLighter" alt="graphic-blue-lighter" class="fixed inset-x-0 m-auto opacity-60 -top-2/3 lg:top-full z-10" :width="graphicWidth" id="graphic-blue-lighter-top">
-    <img :src="graphicBlueLighter" alt="graphic-blue-lighter" class="fixed inset-x-0 m-auto opacity-60 -bottom-2/3 lg:bottom-full z-10" :width="graphicWidth" id="graphic-blue-lighter-bottom">
+        <img :src="graphicBlueLighter" alt="graphic-blue-lighter" class="fixed inset-x-0 m-auto opacity-60 -top-2/3 lg:top-full z-10" :width="graphicWidth" id="graphic-blue-lighter-top">
+        <img :src="graphicBlueLighter" alt="graphic-blue-lighter" class="fixed inset-x-0 m-auto opacity-60 -bottom-2/3 lg:bottom-full z-10" :width="graphicWidth" id="graphic-blue-lighter-bottom">
 
-    <img :src="graphicPlain" alt="graphic-plain" class="fixed inset-0 m-auto flex justify-center items-center w-full lg:w-1/3 px-1 opacity-0 z-10" id="graphic-plain">
+        <img :src="graphicPlain" alt="graphic-plain" class="fixed inset-0 m-auto flex justify-center items-center w-full lg:w-1/3 px-1 opacity-0 z-10" id="graphic-plain">
 
-    <img :src="flowerDecor" alt="flower-top" class="fixed inset-0 m-auto -top-80 w-full lg:w-1/3 px-3 opacity-0 z-10" id="flower-top">
+        <img :src="flowerDecor" alt="flower-top" class="fixed inset-0 m-auto -top-80 w-full lg:w-1/3 px-3 opacity-0 z-10" id="flower-top">
 
-    <img :src="flowerDecor" alt="flower-bottom" class="fixed inset-0 m-auto -bottom-80 w-full lg:w-1/3 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
+        <img :src="flowerDecor" alt="flower-bottom" class="fixed inset-0 m-auto -bottom-80 w-full lg:w-1/3 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
 
-    <img :src="frameUrl" alt="frame" class="fixed h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
+        <img :src="frameUrl" alt="frame" class="fixed h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
 
-    <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed -left-28 -top-28 z-10 opacity-0" id="bg-flower-top-left">
-    <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed -right-28 -bottom-28 z-10 rotate-180 opacity-0" id="bg-flower-bottom-right">
+        <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed -left-28 -top-28 z-10 opacity-0" id="bg-flower-top-left">
+        <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed -right-28 -bottom-28 z-10 rotate-180 opacity-0" id="bg-flower-bottom-right">
 
-    <img :src="flowerTopLeft" alt="flower-left-corner" class="fixed -left-20 -top-20 opacity-0 z-10" width="350" id="flower-left-corner" fetchpriority="high">
-    <img :src="flowerBottomRight" alt="flower-right-corner" class="fixed -right-20 -bottom-20 opacity-0 z-10" width="350" id="flower-right-corner" fetchpriority="high">
+        <img :src="flowerTopLeft" alt="flower-left-corner" class="fixed -left-20 -top-20 opacity-0 z-10" width="350" id="flower-left-corner" fetchpriority="high">
+        <img :src="flowerBottomRight" alt="flower-right-corner" class="fixed -right-20 -bottom-20 opacity-0 z-10" width="350" id="flower-right-corner" fetchpriority="high">
 
-    <div class="fixed bottom-0 left-0 mb-6 ml-6 w-10 h-10 flex flex-col justify-center items-center z-50 bg-brown rounded-full opacity-0" id="music-player" @click="playStopMusic">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="isMusicPlaying">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C5.5 3.72386 5.72386 3.5 6 3.5H10C10.2761 3.5 10.5 3.72386 10.5 4V20C10.5 20.2761 10.2761 20.5 10 20.5H6C5.72386 20.5 5.5 20.2761 5.5 20V4ZM6.5 4.5V19.5H9.5V4.5H6.5Z" fill="#5E2131"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 4C13.5 3.72386 13.7239 3.5 14 3.5H18C18.2761 3.5 18.5 3.72386 18.5 4V20C18.5 20.2761 18.2761 20.5 18 20.5H14C13.7239 20.5 13.5 20.2761 13.5 20V4ZM14.5 4.5V19.5H17.5V4.5H14.5Z" fill="#5E2131"/>
-        </svg>
+        <div class="fixed bottom-0 left-0 mb-6 ml-6 w-10 h-10 flex flex-col justify-center items-center z-50 bg-brown rounded-full opacity-0" id="music-player" @click="playStopMusic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="isMusicPlaying">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C5.5 3.72386 5.72386 3.5 6 3.5H10C10.2761 3.5 10.5 3.72386 10.5 4V20C10.5 20.2761 10.2761 20.5 10 20.5H6C5.72386 20.5 5.5 20.2761 5.5 20V4ZM6.5 4.5V19.5H9.5V4.5H6.5Z" fill="#5E2131"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 4C13.5 3.72386 13.7239 3.5 14 3.5H18C18.2761 3.5 18.5 3.72386 18.5 4V20C18.5 20.2761 18.2761 20.5 18 20.5H14C13.7239 20.5 13.5 20.2761 13.5 20V4ZM14.5 4.5V19.5H17.5V4.5H14.5Z" fill="#5E2131"/>
+            </svg>
 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" v-else>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.76041 2.56114C4.92094 2.4735 5.11652 2.4805 5.27038 2.57941L19.2704 11.5794C19.4135 11.6714 19.5 11.8299 19.5 12C19.5 12.1701 19.4135 12.3286 19.2704 12.4206L5.27038 21.4206C5.11652 21.5195 4.92094 21.5265 4.76041 21.4389C4.59987 21.3512 4.5 21.1829 4.5 21V3C4.5 2.8171 4.59987 2.64879 4.76041 2.56114ZM5.5 3.91583V20.0842L18.0754 12L5.5 3.91583Z" fill="#666666"/>
-        </svg>
-    </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" v-else>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.76041 2.56114C4.92094 2.4735 5.11652 2.4805 5.27038 2.57941L19.2704 11.5794C19.4135 11.6714 19.5 11.8299 19.5 12C19.5 12.1701 19.4135 12.3286 19.2704 12.4206L5.27038 21.4206C5.11652 21.5195 4.92094 21.5265 4.76041 21.4389C4.59987 21.3512 4.5 21.1829 4.5 21V3C4.5 2.8171 4.59987 2.64879 4.76041 2.56114ZM5.5 3.91583V20.0842L18.0754 12L5.5 3.91583Z" fill="#666666"/>
+            </svg>
+        </div>
 
-    <!-- Back to top -->
-    <div class="fixed bottom-0 right-0 mb-6 mr-6 w-12 h-12 flex flex-col justify-center items-center rounded-full z-50 opacity-0" @click="scrollToTop" id="scroll-to-top">
-        <svg width="100%" height="100%" viewBox="0 0 148 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-            <g transform="matrix(1,0,0,1,-6715.77,-4140.13)">
-                <g transform="matrix(-0.999822,-0.0188613,0.0188613,-0.999822,13504.3,8567.48)">
-                    <g transform="matrix(-0.248652,0.968593,-0.968593,-0.248652,12654.2,-1356.55)">
-                        <text x="6853.26px" y="4229.74px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">B</text>
+        <!-- Back to top -->
+        <div class="fixed bottom-0 right-0 mb-6 mr-6 w-12 h-12 flex flex-col justify-center items-center rounded-full z-50 opacity-0" @click="scrollToTop" id="scroll-to-top">
+            <svg width="100%" height="100%" viewBox="0 0 148 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <g transform="matrix(1,0,0,1,-6715.77,-4140.13)">
+                    <g transform="matrix(-0.999822,-0.0188613,0.0188613,-0.999822,13504.3,8567.48)">
+                        <g transform="matrix(-0.248652,0.968593,-0.968593,-0.248652,12654.2,-1356.55)">
+                            <text x="6853.26px" y="4229.74px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">B</text>
+                        </g>
+                        <g transform="matrix(-0.519441,0.854506,-0.854506,-0.519441,14035,600.731)">
+                            <text x="6848.6px" y="4246.9px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">a</text>
+                        </g>
+                        <g transform="matrix(-0.753854,0.657042,-0.657042,-0.753854,14794.2,2983.39)">
+                            <text x="6838.26px" y="4262.85px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">c</text>
+                        </g>
+                        <g transform="matrix(-0.909195,0.41637,-0.41637,-0.909195,14810.4,5317.65)">
+                            <text x="6825.34px" y="4273.8px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">k</text>
+                        </g>
+                        <g transform="matrix(-0.998328,0.0578109,-0.0578109,-0.998328,13844.2,8163.31)">
+                            <text x="6804.02px" y="4281.91px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">T</text>
+                        </g>
+                        <g transform="matrix(-0.975024,-0.222101,0.222101,-0.975024,12455.3,9966.07)">
+                            <text x="6788.03px" y="4282.7px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">o</text>
+                        </g>
+                        <g transform="matrix(-0.807419,-0.589979,0.589979,-0.807419,9703.32,11717.6)">
+                            <text x="6764.1px" y="4275.12px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">T</text>
+                        </g>
+                        <g transform="matrix(-0.612087,-0.79079,0.79079,-0.612087,7510.45,12215.3)">
+                            <text x="6751.26px" y="4265.57px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">o</text>
+                        </g>
+                        <g transform="matrix(-0.332464,-0.943116,0.943116,-0.332464,4971.94,12021.3)">
+                            <text x="6740.28px" y="4251.06px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">p</text>
+                        </g>
                     </g>
-                    <g transform="matrix(-0.519441,0.854506,-0.854506,-0.519441,14035,600.731)">
-                        <text x="6848.6px" y="4246.9px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">a</text>
+                    <g transform="matrix(1.31026,0,0,1.31026,-2090.32,-1296.44)">
+                        <circle cx="6778.75" cy="4208.09" r="38.311" style="fill:rgb(232,205,188);"/>
                     </g>
-                    <g transform="matrix(-0.753854,0.657042,-0.657042,-0.753854,14794.2,2983.39)">
-                        <text x="6838.26px" y="4262.85px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">c</text>
-                    </g>
-                    <g transform="matrix(-0.909195,0.41637,-0.41637,-0.909195,14810.4,5317.65)">
-                        <text x="6825.34px" y="4273.8px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">k</text>
-                    </g>
-                    <g transform="matrix(-0.998328,0.0578109,-0.0578109,-0.998328,13844.2,8163.31)">
-                        <text x="6804.02px" y="4281.91px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">T</text>
-                    </g>
-                    <g transform="matrix(-0.975024,-0.222101,0.222101,-0.975024,12455.3,9966.07)">
-                        <text x="6788.03px" y="4282.7px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">o</text>
-                    </g>
-                    <g transform="matrix(-0.807419,-0.589979,0.589979,-0.807419,9703.32,11717.6)">
-                        <text x="6764.1px" y="4275.12px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">T</text>
-                    </g>
-                    <g transform="matrix(-0.612087,-0.79079,0.79079,-0.612087,7510.45,12215.3)">
-                        <text x="6751.26px" y="4265.57px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">o</text>
-                    </g>
-                    <g transform="matrix(-0.332464,-0.943116,0.943116,-0.332464,4971.94,12021.3)">
-                        <text x="6740.28px" y="4251.06px" style="font-family:'Poppins-Medium', 'Poppins';font-weight:500;font-size:25px;fill:rgb(94,33,49);">p</text>
+                    <g transform="matrix(0.748954,0,0,0.748954,1661.19,1019.22)">
+                        <g transform="matrix(4.16667,0,0,4.16667,6800.04,4219.99)">
+                            <path d="M12,4.74C12.276,4.74 12.74,4.964 12.74,5.24L12.74,19C12.74,19.276 12.276,19.5 12,19.5C11.724,19.5 11.26,19.276 11.26,19L11.26,5.24C11.26,4.964 11.724,4.74 12,4.74Z" style="fill:rgb(94,33,49);"/>
+                        </g>
+                        <g transform="matrix(4.16667,0,0,4.16667,6800.04,4219.99)">
+                            <path d="M11.646,4.646C11.842,4.451 12.158,4.451 12.354,4.646L19.354,11.646C19.549,11.842 19.693,12.424 19.498,12.619C19.303,12.815 18.842,13.029 18.646,12.834L12,6.187L5.354,12.834C5.158,13.029 4.758,12.828 4.563,12.633C4.367,12.437 4.451,11.842 4.646,11.646L11.646,4.646Z" style="fill:rgb(94,33,49);"/>
+                        </g>
                     </g>
                 </g>
-                <g transform="matrix(1.31026,0,0,1.31026,-2090.32,-1296.44)">
-                    <circle cx="6778.75" cy="4208.09" r="38.311" style="fill:rgb(232,205,188);"/>
-                </g>
-                <g transform="matrix(0.748954,0,0,0.748954,1661.19,1019.22)">
-                    <g transform="matrix(4.16667,0,0,4.16667,6800.04,4219.99)">
-                        <path d="M12,4.74C12.276,4.74 12.74,4.964 12.74,5.24L12.74,19C12.74,19.276 12.276,19.5 12,19.5C11.724,19.5 11.26,19.276 11.26,19L11.26,5.24C11.26,4.964 11.724,4.74 12,4.74Z" style="fill:rgb(94,33,49);"/>
-                    </g>
-                    <g transform="matrix(4.16667,0,0,4.16667,6800.04,4219.99)">
-                        <path d="M11.646,4.646C11.842,4.451 12.158,4.451 12.354,4.646L19.354,11.646C19.549,11.842 19.693,12.424 19.498,12.619C19.303,12.815 18.842,13.029 18.646,12.834L12,6.187L5.354,12.834C5.158,13.029 4.758,12.828 4.563,12.633C4.367,12.437 4.451,11.842 4.646,11.646L11.646,4.646Z" style="fill:rgb(94,33,49);"/>
-                    </g>
-                </g>
-            </g>
-        </svg>
-    </div>
+            </svg>
+        </div>
+    <!-- </div> -->
+    
 
     <!-- Content -->
-    <div class="relative overflow-x-hidden flex flex-col items-center container overflow-y-auto snap-y snap-mandatory">   
+    <div id="container" class="w-full relative overflow-x-hidden z-20">   
 
         <!-- Ar-Rum -->
-        <div class="panel snap-always snap-center h-screen flex flex-col justify-center items-center mx-12 lg:w-1/2  relative" id="ar-rum">
-            <span class="font-bold text-red-darkest mb-4 z-20">Q.S. Ar Rum: 21</span>
-            <p class="font-semibold text-blue-darkest text-center z-20">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
-            
-            <div class="absolute bottom-0 mx-auto z-30 mb-24">
-                <span class="text-red font-semibold">scroll down</span>
-                <Vue3Lottie :animationData="scrollDown" :height="60" :width="60" class="-mt-3"/>
+        <section class="page s1 h-screen flex justify-center items-center" id="ar-rum">
+            <div class="flex flex-col mx-12 lg:w-1/2 justify-center items-center relative h-screen">
+                <span class="font-bold text-red-darkest mb-4 z-20">Q.S. Ar Rum: 21</span>
+                <p class="font-semibold text-blue-darkest text-center z-20">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
                 
+                <div class="absolute bottom-0 mx-auto z-30 mb-24">
+                    <span class="text-red font-semibold">scroll down</span>
+                    <Vue3Lottie :animationData="scrollDown" :height="60" :width="60" class="-mt-3"/>
+                    
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Salam -->
-        <div class="panel snap-always snap-center h-screen flex flex-col justify-center items-center mx-12 z-20" id="salam">
+        <section class="page s2 h-screen flex flex-col justify-center items-center mx-12 z-20" id="salam">
             <span class="font-bold text-red-darkest mb-4">Assalamu'alaikum Wr Wb</span>
             <p class="font-semibold text-blue-darkest text-center">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami</p>
-        </div>
+        </section>
 
         <!-- Couple -->
-        <div class="panel snap-always snap-center h-screen flex flex-col justify-center items-center z-20" id="couple">
+        <section class="page s3 h-screen flex flex-col justify-center items-center z-20" id="couple">
             <initial colors="#782D41" id="initial-couple" class="opacity-0"></initial>
 
             <div class="flex flex-col h-auto items-center mt-4 relative">
@@ -162,10 +167,10 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Akad -->
-        <div class="panel snap-always snap-center h-screen flex flex-col justify-center items-center relative w-full z-20" id="akad">
+        <section class="page s4 h-screen flex flex-col justify-center items-center relative w-full z-20" id="akad">
             <span class="absolute name top-16 text-3xl text-red-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
             <div class="inset-0 flex flex-col justify-center items-center z-20">
@@ -208,10 +213,10 @@
                 </div>
             </div>
 
-        </div>
+        </section>
 
         <!-- Resepsi -->
-        <div class="panel snap-always snap-center h-screen flex flex-col justify-center items-center relative w-full z-20" id="resepsi">
+        <section class="page s5 h-screen flex flex-col justify-center items-center relative w-full z-20" id="resepsi">
             <div class="flex flex-col absolute top-16 justify-center items-center">
                 <span class="name text-3xl text-red-darkest font-semibold opacity-0" id="resepsi-nikah">Resepsi Pernikahan</span>
 
@@ -236,7 +241,7 @@
             </div>
             
 
-            <div class="absolute inset-0 flex flex-col justify-center items-center -mt-12 z-20">
+            <div class="absolute inset-0 flex flex-col justify-center items-center -mt-12 z-20 fixed top-0 left-0 right-0 ">
                 <!-- Resepsi Date -->
                 <div class="flex flex-col justify-center items-center static mt-20 opacity-0" id="event-resepsi">
                     <span class="font-semibold text-brown text-base">Sabtu</span>
@@ -275,10 +280,10 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Gift -->
-        <div class="panel snap-always snap-center h-screen bg-red-lightest flex flex-col justify-center  items-center relative w-full" id="gift">
+        <section class="page s6 h-screen bg-red-lightest flex flex-col justify-center  items-center relative w-full" id="gift">
             <!-- Gift Header -->
             <div class="absolute top-0 w-full z-20 -left-40 opacity-0" id="gift-header">
                 <div id="rectangle-top" class="box-gift top-0 absolute w-full h-44 rounded-br-10xl z-20"></div>
@@ -329,10 +334,10 @@
                 <div id="rectangle-bottom" class="box-gift bottom-0 absolute w-full h-44 rounded-tl-10xl z-20"></div>
                 <img :src="giftBottom" alt="gift-footer" class="bottom-0 lg:right-0 absolute rounded-tl-10xl z-20 " id="gift-footer-photo"/>
             </div>
-        </div>
+        </section>
 
         <!-- Wishes -->
-        <div class="panel snap-always snap-center h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="wishes">
+        <section class="page s7 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="wishes">
             <div class="flex flex-col justify-center items-center z-20 w-full lg:w-1/2 px-6">
                 <initial colors="#5E2131" id="initial-wishes" class="opacity-80"></initial>
 
@@ -389,10 +394,10 @@
                 </div>
 
             </div>
-        </div>
+        </section>
 
         <!-- Gallery -->
-        <div class="panel snap-always snap-center h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="gallery">
+        <section class="page s8 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="gallery">
 
             <initial colors="#5E2131" id="initial-gallery" class="opacity-80"></initial>
 
@@ -413,10 +418,10 @@
                 
             </div>
 
-        </div>
+        </section>
 
         <!-- Thank You -->
-        <div class="panel snap-always snap-center h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="thank-you">
+        <section class="page s9 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="thank-you">
             
             <div class="flex flex-col h-screen justify-center items-center z-20 opacity-0 w-full lg:w-1/3" id="thank-you-words">
                 <span class="name text-brown text-3xl font-semibold">Terima Kasih</span>
@@ -426,11 +431,11 @@
                 <span class="mt-2 text-brown-dark font-semibold">Wassalamu‘alaikum Wr Wb</span>
             </div>
 
-        </div>
+        </section>
 
 
         <!-- Closing -->
-        <div class="panel snap-always snap-center h-screen bg-blue-darkest flex flex-col justify-center items-center relative w-full" id="closing">
+        <section class="page s10 h-screen bg-blue-darkest flex flex-col justify-center items-center relative w-full" id="closing">
 
             <div class="flex flex-col justify-center items-center my-8 text-brown font-semibold z-10 text-lg">
                 <span>Kami yang berbahagia</span>
@@ -442,7 +447,7 @@
             </div>
             <initial colors="#E5ABB5" id="initial-wishes" class="mt-4 opacity-80"></initial>
         
-        </div>
+        </section>
 
     </div>
 
@@ -460,6 +465,10 @@ import { Vue3Lottie } from 'vue3-lottie'
 import scrollDown from './assets/scroll_down.json'
 
 import music from './assets/music/music.mp3'
+
+import "./plugins/fullpage-scroll"
+// import "./plugins/onepagescroll.css"
+// import { onepagescroll } from "./plugins/onepagescroll.js"
 
   export default {
     components:{
@@ -531,11 +540,20 @@ import music from './assets/music/music.mp3'
                 { id: '12', url: new URL('./assets/photo/gallery/4.webp', import.meta.url).href },
             ],
 
-            audioElement : new Audio(music)
+            audioElement : new Audio(music),
         }
         
     },
     mounted(){
+        // onepagescroll('div#container');
+
+        var fps = new FullPageScroll('container', { 
+            goToTopOnLast: false,
+            // options here
+            // slideSelector: "section",
+        });
+
+
         setInterval(()=>{
             var now = new Date().getTime()
             var distance = this.countDownDate - now;
@@ -562,79 +580,21 @@ import music from './assets/music/music.mp3'
 
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-        let panels = gsap.utils.toArray(".panel");
-        // this.observer = ScrollTrigger.normalizeScroll(true)
-        // this.observer = ScrollTrigger.normalizeScroll({
-        //     ignore:  "#list-wishes, .wish"
-        // })
-        
-        // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
-        // document.addEventListener("touchstart", e => {
-        //     if (this.scrollTween) {
-        //         e.preventDefault();
-        //         e.stopImmediatePropagation();
-        //     }
-        // }, {capture: true, passive: false})
-
-        // panels.forEach((panel, i) => {
-        //     ScrollTrigger.create({
-        //         trigger: panel,
-        //         start: "top bottom",
-        //         end: "+=199%",
-        //         // markers:true,
-        //         onToggle: self => {
-        //             self.isActive && !this.scrollTween && this.goToSection(i)
-        //         },
-        //     });
-        // });
-
-        // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes)
-        // ScrollTrigger.create({
-        //     start: 0, 
-        //     end: "max",
-        //     snap: 1 / (panels.length - 1)
-        // })
-
-        // ScrollTrigger.defaults({
-        //     // markers: true
-        // });
-
-        // panels.forEach((eachPanel, i) => {
-        //     // const mainAnim = gsap.timeline({ paused: true });
-
-        //     ScrollTrigger.create({
-        //         trigger: eachPanel,
-        //         onEnter: () => this.goToSection(i)
-        //     });
-
-        //     ScrollTrigger.create({
-        //         trigger: eachPanel,
-        //         start: "bottom bottom",
-        //         onEnterBack: () => this.goToSection(i)
-        //     });
-        // });
-
-        // let sections = gsap.utils.toArray(".panel");
-        // sections.forEach((eachPanel,i) => {
-        //     ScrollTrigger.create({
-        //         trigger: eachPanel,
-        //         start: "top bottom-=20",
-        //         end: "bottom top+=1",
-        //         onEnter: () => this.goToSection(eachPanel),
-        //         onEnterBack: () => this.goToSection(eachPanel),
-        //         // markers: true
-        //     });
-        // });
-
         const salamElement = document.getElementById('salam'); 
 
         const suratElement = document.getElementById('ar-rum'); 
 
-        // const audioElement = new Audio("./assets/music/music.mp3");
-
         var vol  = 0.70;
 
+        ScrollTrigger.defaults({
+            // toggleActions: "restart pause resume pause",
+            scroller: "#container",
+            // markers: true
+        });
+
+
         window.addEventListener('scroll', () => { 
+            console.log('aaaa');
             if (this.isVisible(salamElement)) { 
                 this.audioElement.volume = vol
                 this.audioElement.play()
@@ -659,14 +619,10 @@ import music from './assets/music/music.mp3'
                             }
                         }, interval);
                 } 
-                // else {
-                //     this.audioElement.volume = 0.7
-                //     this.audioElement.play()
-                //     this.isMusicPlaying=true
-                // }
             } 
         }); 
 
+        
         // Ar-Rum transition
         gsap.from(['#flower-left-top', '#flower-right-top'], {
             y: -180,
@@ -717,6 +673,7 @@ import music from './assets/music/music.mp3'
                 trigger: '#salam',
                 start: "top bottom",  
                 end: "bottom bottom", 
+                markers: true,
                 scrub: true
             },
         })
@@ -755,11 +712,6 @@ import music from './assets/music/music.mp3'
         tlSalam.to(['#scroll-to-top', '#music-player'], {
             opacity: 1
         }, 0)
-
-        // tlSalam.to(['#music-player'], {
-        //     rotate: 10,
-        //     repeat:-1
-        // }, 0)
 
         // Couple transition
         let tlCouple = gsap.timeline({
@@ -1269,65 +1221,6 @@ import music from './assets/music/music.mp3'
             a.click()
         },
 
-        // goToSection(i) {
-        //     gsap.to(window, {
-        //         scrollTo: { y: i * innerHeight, autoKill: false, ease: "Power3.easeInOut" },
-        //         duration: 0.85
-        //     });
-        // },
-
-        // goToSection(i) {
-        //     this.scrollTween = gsap.to(window, {
-        //         scrollTo: {y: i * innerHeight, autoKill: false},
-        //         // onStart: () => {
-        //         //     this.observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-        //         //     this.observer.enable();
-        //         // },
-        //         duration: 1,
-        //         onComplete: () => this.scrollTween = null,
-        //         overwrite: true
-        //     });
-        // },
-
-    //     goToSection(section) {
-    //     if (this.scrolling.enabled) {
-    //       this.disableScroll();
-    //       gsap.to(window, {
-    //       scrollTo: {
-    //           y: section,
-    //           // y: isBack && i===0 ? sections[0].offsetTop : sections[i+1]?.offsetTop, // Scroll to the top of the panel
-    //           autoKill: false
-    //       },
-    //       onComplete: this.enableScroll,
-    //       duration: 1
-    //       });
-    //     }
-    //   },
-
-    //   disableScroll() {
-    //     // setTimeout(() => {
-    //         if (this.scrolling.enabled) {
-    //             this.scrolling.enabled = false;
-    //             window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
-    //             this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
-    //         }
-    //     // }, 700)
-        
-    //   },
-
-    //   enableScroll() {
-    //     setTimeout(() => {
-    //         if (!this.scrolling.enabled) {
-    //             this.scrolling.enabled = true;
-    //             window.removeEventListener("scroll", gsap.ticker.tick);
-    //             this.scrolling.events.forEach((e, i) =>
-    //             (i ? document : window).removeEventListener(e, this.scrolling.prevent)
-    //             );
-    //         }
-    //     }, "1 second")
-        
-    //   },
-
       openAkadMap() {
             // window.open(this.urlAkadMap, '_blank').focus();
             const a = document.createElement("a");
@@ -1384,19 +1277,19 @@ import music from './assets/music/music.mp3'
   }
 </script>
 
-<style scoped>
-/* .container {
-    height: 100vh;
+<style>
+ /* #container {
+    max-height: 100vh;
+ } */
+
+/* #container {
+  max-height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-} */
-/* 
-.panel {
-    height: 100vh !important;
-    margin: 0; 
-  padding: 0; 
+  scroll-snap-type: y mandatory;
+}
+
+.page {
     scroll-snap-align: start;
-    scroll-snap-stop: always;
 } */
 
 .flip-verticaly {

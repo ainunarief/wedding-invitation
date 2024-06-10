@@ -1,14 +1,14 @@
 <template>
   <Loading v-if="isLoading"></Loading>
 
-  <div v-else>
+  <template v-else>
     <img :src="rumagadang" alt="rumagadang" width="170" class="fixed inset-0 m-auto opacity-20 z-20" id="rumagadang">
 
     <cover @closeCover="closeCover" v-if="showCover"></cover>
 
     <Content v-else></Content>
 
-  </div>
+  </template>
 </template>
 
 <script>
@@ -60,11 +60,8 @@ html {
 
 body {
   @apply bg-blue-lightest;
-  /* white-space:pre-wrap;
-  margin:0;
-  padding:0;
-  width:100%;
-  height:100% */
+  margin: 0;
+  padding: 0;
 }
 
 /* #app {
