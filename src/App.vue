@@ -2,7 +2,7 @@
   <Loading v-if="isLoading"></Loading>
 
   <template v-else>
-    <img :src="rumagadang" alt="rumagadang" width="170" class="fixed inset-0 m-auto opacity-20 z-20" id="rumagadang">
+    <img :src="rumagadang" alt="rumagadang" width="170" class="fixed-elements fixed inset-0 m-auto opacity-20 z-20" id="rumagadang">
 
     <cover @closeCover="closeCover" v-if="showCover"></cover>
 
@@ -64,10 +64,4 @@ body {
   padding: 0;
 }
 
-/* #app {
-  position:absolute;
-  width:100%;
-  height:100%;
-  overflow:scroll;
-} */
 </style>
