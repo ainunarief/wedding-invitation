@@ -123,7 +123,7 @@
                     </div>
 
                     <span class="text-sm text-gray-darkest font-semibold text-center my-2">Putri dari Bpk. H. Mhd. Hasymi SE, Akt, MSi, CA, ACPA<br/>& Ibu Dra. Hj. Herlina</span>
-                    <button class="bg-brown p-1 rounded-md" @clik="openIG('nia_arahmania')">
+                    <button class="bg-brown p-1 rounded-md" @click="openIG('nia_arahmania')">
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.125 2.1875C3.95038 2.1875 2.1875 3.95038 2.1875 6.125V14.875C2.1875 17.0496 3.95038 18.8125 6.125 18.8125H14.875C17.0496 18.8125 18.8125 17.0496 18.8125 14.875V6.125C18.8125 3.95038 17.0496 2.1875 14.875 2.1875H6.125ZM1.3125 6.125C1.3125 3.46713 3.46713 1.3125 6.125 1.3125H14.875C17.5329 1.3125 19.6875 3.46713 19.6875 6.125V14.875C19.6875 17.5329 17.5329 19.6875 14.875 19.6875H6.125C3.46713 19.6875 1.3125 17.5329 1.3125 14.875V6.125Z" fill="#98877B"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9871 7.43279C10.3499 7.3383 9.69912 7.44714 9.12735 7.74382C8.55558 8.0405 8.09192 8.50991 7.80231 9.08529C7.51271 9.66068 7.4119 10.3127 7.51424 10.9487C7.61658 11.5847 7.91684 12.1722 8.37233 12.6277C8.82782 13.0832 9.41533 13.3834 10.0513 13.4858C10.6873 13.5881 11.3393 13.4873 11.9147 13.1977C12.4901 12.9081 12.9595 12.4444 13.2562 11.8727C13.5529 11.3009 13.6617 10.6501 13.5672 10.0129C13.4708 9.36299 13.168 8.76126 12.7034 8.29665C12.2387 7.83203 11.637 7.52917 10.9871 7.43279ZM8.72435 6.96715C9.45948 6.5857 10.2962 6.44577 11.1154 6.56725C11.9511 6.69117 12.7247 7.08057 13.3221 7.67793C13.9194 8.27529 14.3088 9.04894 14.4328 9.8846C14.5542 10.7038 14.4143 11.5405 14.0329 12.2757C13.6514 13.0108 13.0479 13.6069 12.3081 13.9793C11.5683 14.3516 10.73 14.4812 9.9123 14.3497C9.09461 14.2181 8.33924 13.832 7.75361 13.2464C7.16799 12.6608 6.78193 11.9054 6.65035 11.0877C6.51878 10.27 6.64838 9.43168 7.02073 8.6919C7.39308 7.95212 7.98922 7.34859 8.72435 6.96715Z" fill="#98877B"/>
@@ -156,7 +156,7 @@
                     </div>
 
                     <span class="text-sm text-gray-darkest font-semibold text-center my-2">Putra dari Bpk. (Alm) Drs. H. Sudarman<br/>& Ibu Hj. Yenni Fatia Riyani</span>
-                    <button class="bg-brown p-1 rounded-md" @clik="openIG('arieftrifianto')">
+                    <button class="bg-brown p-1 rounded-md" @click="openIG('arieftrifianto')">
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.125 2.1875C3.95038 2.1875 2.1875 3.95038 2.1875 6.125V14.875C2.1875 17.0496 3.95038 18.8125 6.125 18.8125H14.875C17.0496 18.8125 18.8125 17.0496 18.8125 14.875V6.125C18.8125 3.95038 17.0496 2.1875 14.875 2.1875H6.125ZM1.3125 6.125C1.3125 3.46713 3.46713 1.3125 6.125 1.3125H14.875C17.5329 1.3125 19.6875 3.46713 19.6875 6.125V14.875C19.6875 17.5329 17.5329 19.6875 14.875 19.6875H6.125C3.46713 19.6875 1.3125 17.5329 1.3125 14.875V6.125Z" fill="#98877B"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9871 7.43279C10.3499 7.3383 9.69912 7.44714 9.12735 7.74382C8.55558 8.0405 8.09192 8.50991 7.80231 9.08529C7.51271 9.66068 7.4119 10.3127 7.51424 10.9487C7.61658 11.5847 7.91684 12.1722 8.37233 12.6277C8.82782 13.0832 9.41533 13.3834 10.0513 13.4858C10.6873 13.5881 11.3393 13.4873 11.9147 13.1977C12.4901 12.9081 12.9595 12.4444 13.2562 11.8727C13.5529 11.3009 13.6617 10.6501 13.5672 10.0129C13.4708 9.36299 13.168 8.76126 12.7034 8.29665C12.2387 7.83203 11.637 7.52917 10.9871 7.43279ZM8.72435 6.96715C9.45948 6.5857 10.2962 6.44577 11.1154 6.56725C11.9511 6.69117 12.7247 7.08057 13.3221 7.67793C13.9194 8.27529 14.3088 9.04894 14.4328 9.8846C14.5542 10.7038 14.4143 11.5405 14.0329 12.2757C13.6514 13.0108 13.0479 13.6069 12.3081 13.9793C11.5683 14.3516 10.73 14.4812 9.9123 14.3497C9.09461 14.2181 8.33924 13.832 7.75361 13.2464C7.16799 12.6608 6.78193 11.9054 6.65035 11.0877C6.51878 10.27 6.64838 9.43168 7.02073 8.6919C7.39308 7.95212 7.98922 7.34859 8.72435 6.96715Z" fill="#98877B"/>
@@ -377,7 +377,7 @@
                     </div>
                 </div>
 
-                <button id="send-wishes" class="w-full mt-2 py-3 font-semibold text-gray-lightest" @click="sendWishes">Kirim</button>
+                <button id="send-wishes" class="w-full mt-2 py-3 font-semibold text-gray-lightest" @click="sendWishes" :disabled="disabledWishes">{{ wishesButton }}</button>
 
                 <img :src="border" alt="border" class="my-1 w-full" height="18" id="border">
 
@@ -518,6 +518,8 @@ import music from './assets/music/music.mp3'
             queryString: window.location.search,
             listWishes: [],
             totalWishes: 0,
+            disabledWishes: false,
+            wishesButton: 'Kirim',
 
             bgFlower: new URL('./assets/flower_one_color.svg', import.meta.url).href,
             frameUrl: new URL('./assets/frame.svg', import.meta.url).href,
@@ -1256,6 +1258,7 @@ import music from './assets/music/music.mp3'
         },
 
         openIG(user){
+        console.log('aa');
             const a = document.createElement("a");
             let url = `https://www.instagram.com/${user}`
             a.setAttribute('href', url);
@@ -1294,24 +1297,31 @@ import music from './assets/music/music.mp3'
         },
 
         sendWishes(){
+            console.log('aaa');
             if(this.namaTamu === '' || this.wishes === ''){
                 return
             }
+            this.disabledWishes = true
+            this.wishesButton = 'Mengirim...'
             let payload = {
                 name : this.namaTamu,
                 wish : this.wishes,
                 date : new Date(),
-                hadir: this.hadir,
-                jumlah: this.jumlah
+                hadir: this.hadir == 'true' ? true : false,
+                jumlah: parseInt(this.jumlah)
             }
             const promise = databases.createDocument(DATABASE_ID, COLLECTION_ID, 'unique()', payload);
             promise.then(
                 () => {
-                this.fetchComments();
-                this.wishes = '';
+                    this.fetchComments();
+                    this.wishes = '';
+                    this.disabledWishes = false
+                    this.wishesButton = 'Kirim'
                 },
                 (err) => {
-                console.log(err);
+                    console.log(err);
+                    this.disabledWishes = false
+                    this.wishesButton = 'Gagal, Silahkan Kirim Ulang'
                 }
             );
         }
