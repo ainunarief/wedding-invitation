@@ -63,5 +63,18 @@ body {
   margin: 0;
   padding: 0;
 }
+/* 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A95576;
+  border-radius: 10px;
+} */
 
 </style>

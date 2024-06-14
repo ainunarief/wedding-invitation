@@ -401,8 +401,51 @@
 
             <span class="name mt-3 text-3xl text-red-darkest font-semibold" id="our-gallery">Our Galley</span>
 
-            <div class="flex flex-col h-4/5 justify-center items-center mt-2 font-black w-full lg:w-1/2 z-30"> 
-                <!-- <div :style="{ backgroundImage: `${photoShowed.image}` }"> -->
+            <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-auto mx-6 lg:mx-20 z-20">
+                <!-- <div v-for="(photo, i) in gallery" :id="i" :class="{ 'border' : isLandscape(photo) }"> -->
+                <div v-for="(photo, i) in gallery" :id="i" :class="{ 'col-span-2' : isLandscape(photo), 'col-span-2 row-span-2' : rowSpanRandom(photo, i) }">
+                    <img :src="photo.url" class="photo h-auto max-w-full rounded-lg scale-0" @click="chosePhoto(photo)">
+                </div>
+            </div>
+
+            <div class="fixed top-0 h-screen w-full bg-gray-darkest/80 backdrop-blur-sm z-60 flex flex-col justify-center items-center transition" v-if="photoShowed">
+                <div class="flex justify-between">
+                    <div class="m-auto cursor-pointer w-8 h-8">
+                        <div  @click="prevPhoto(photoShowed)" v-if="photoShowed.id>1">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM1.5 12C1.5 6.20101 6.20101 1.5 12 1.5C17.799 1.5 22.5 6.20101 22.5 12C22.5 17.799 17.799 22.5 12 22.5C6.20101 22.5 1.5 17.799 1.5 12Z" fill="#ffffff"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3536 7.64645C12.5488 7.84171 12.5488 8.15829 12.3536 8.35355L8.70711 12L12.3536 15.6464C12.5488 15.8417 12.5488 16.1583 12.3536 16.3536C12.1583 16.5488 11.8417 16.5488 11.6464 16.3536L7.64645 12.3536C7.45118 12.1583 7.45118 11.8417 7.64645 11.6464L11.6464 7.64645C11.8417 7.45118 12.1583 7.45118 12.3536 7.64645Z" fill="#ffffff"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 12C7.5 11.7239 7.72386 11.5 8 11.5H16C16.2761 11.5 16.5 11.7239 16.5 12C16.5 12.2761 16.2761 12.5 16 12.5H8C7.72386 12.5 7.5 12.2761 7.5 12Z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-4/5">
+                        <img :src="photoShowed.url" alt="photoShowed" id="photo-showed" class="h-auto max-w-full rounded-md">
+                    </div>
+                    
+                    <div class="m-auto cursor-pointer w-8 h-8">
+                        <div  @click="nextPhoto(photoShowed)" v-if="photoShowed.id<gallery.length-1">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM1.5 12C1.5 6.20101 6.20101 1.5 12 1.5C17.799 1.5 22.5 6.20101 22.5 12C22.5 17.799 17.799 22.5 12 22.5C6.20101 22.5 1.5 17.799 1.5 12Z" fill="#ffffff"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6464 7.64645C11.8417 7.45118 12.1583 7.45118 12.3536 7.64645L16.3536 11.6464C16.5488 11.8417 16.5488 12.1583 16.3536 12.3536L12.3536 16.3536C12.1583 16.5488 11.8417 16.5488 11.6464 16.3536C11.4512 16.1583 11.4512 15.8417 11.6464 15.6464L15.2929 12L11.6464 8.35355C11.4512 8.15829 11.4512 7.84171 11.6464 7.64645Z" fill="#ffffff"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 12C7.5 11.7239 7.72386 11.5 8 11.5H16C16.2761 11.5 16.5 11.7239 16.5 12C16.5 12.2761 16.2761 12.5 16 12.5H8C7.72386 12.5 7.5 12.2761 7.5 12Z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 cursor-pointer" @click="photoShowed = null" >
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM1.5 12C1.5 6.20101 6.20101 1.5 12 1.5C17.799 1.5 22.5 6.20101 22.5 12C22.5 17.799 17.799 22.5 12 22.5C6.20101 22.5 1.5 17.799 1.5 12Z" fill="#ffffff"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3536 8.64645C15.5488 8.84171 15.5488 9.15829 15.3536 9.35355L9.35355 15.3536C9.15829 15.5488 8.84171 15.5488 8.64645 15.3536C8.45118 15.1583 8.45118 14.8417 8.64645 14.6464L14.6464 8.64645C14.8417 8.45118 15.1583 8.45118 15.3536 8.64645Z" fill="#ffffff"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.64645 8.64645C8.84171 8.45118 9.15829 8.45118 9.35355 8.64645L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L8.64645 9.35355C8.45118 9.15829 8.45118 8.84171 8.64645 8.64645Z" fill="#ffffff"/>
+                    </svg>
+
+                </div>
+            </div>
+
+            <!-- {{ photoShowed }} -->
+
+            <!-- <div class="flex flex-col h-4/5 justify-center items-center mt-2 font-black w-full lg:w-1/2 z-30"> 
                     <div class="px-3 h-2/3 lg:h-4/5 flex">
                         <img :src="photoShowed.url" alt="photoShowed" id="photo-showed" class="block m-auto max-w-full max-h-full">
                     </div>
@@ -411,10 +454,7 @@
                             <img :src="photo.url" class="h-full w-full">
                         </div>
                     </div>
-                    
-                <!-- </div> -->
-                
-            </div>
+            </div> -->
 
         </section>
 
@@ -524,7 +564,8 @@ import music from './assets/music/music.mp3'
             bgFlower: new URL('./assets/flower_one_color.svg', import.meta.url).href,
             frameUrl: new URL('./assets/frame.svg', import.meta.url).href,
 
-            photoShowed: { id: '1', url: new URL('./assets/photo/gallery/1.jpg', import.meta.url).href },
+            photoShowed: null,
+            // photoShowed: { id: '1', url: new URL('./assets/photo/gallery/1.jpg', import.meta.url).href },
             gallery: [
                 { id: '1', url: new URL('./assets/photo/gallery/1.jpg', import.meta.url).href },
                 { id: '2', url: new URL('./assets/photo/gallery/2.jpg', import.meta.url).href },
@@ -538,8 +579,8 @@ import music from './assets/music/music.mp3'
                 { id: '10', url: new URL('./assets/photo/gallery/10.jpg', import.meta.url).href },
                 { id: '11', url: new URL('./assets/photo/gallery/11.jpg', import.meta.url).href },
                 { id: '12', url: new URL('./assets/photo/gallery/12.jpg', import.meta.url).href },
-                { id: '13', url: new URL('./assets/photo/gallery/13.jpg', import.meta.url).href },
-                { id: '14', url: new URL('./assets/photo/gallery/14.jpg', import.meta.url).href },
+                { id: '13', url: new URL('./assets/photo/gallery/13.jpg', import.meta.url).href, landscape: true  },
+                { id: '14', url: new URL('./assets/photo/gallery/14.jpg', import.meta.url).href},
                 { id: '15', url: new URL('./assets/photo/gallery/15.jpg', import.meta.url).href },
                 { id: '16', url: new URL('./assets/photo/gallery/16.jpg', import.meta.url).href },
                 { id: '17', url: new URL('./assets/photo/gallery/17.jpg', import.meta.url).href },
@@ -1107,6 +1148,13 @@ import music from './assets/music/music.mp3'
             duration: 1.7
         }, "<")
 
+        tlGallery.to(".photo", {
+            scale: 1,
+            stagger: 0.2,
+            // duration: 1,
+            delay: 1
+        }, "+=0.2")
+
         // Thank You transition
         let tlThankYou = gsap.timeline({
             scrollTrigger:{
@@ -1209,6 +1257,25 @@ import music from './assets/music/music.mp3'
 
     },
     methods:{
+        isLandscape(target) {
+            // const myImage = new Image()
+            // myImage.src = target.url
+            if(target.landscape){
+                return true
+            }
+            return false
+        },
+
+        rowSpanRandom(target, i){
+            const random = [3, 7, 18, 26]
+            // console.log(i);
+            if(!target.landscape){
+                if(random.includes(i))  return true
+                return false
+            }
+            return false
+        },
+
         isVisible(value){
             const item = value.getBoundingClientRect(); 
             return ( 
@@ -1243,7 +1310,6 @@ import music from './assets/music/music.mp3'
         },  
 
         copyToClipboard(text){
-            console.log(text);
             navigator.clipboard.writeText(text).then(() => {
                 console.log('Content copied to clipboard');
                 /* Resolved - text copied to clipboard successfully */
@@ -1257,8 +1323,17 @@ import music from './assets/music/music.mp3'
             this.photoShowed = photo
         },
 
+        prevPhoto(showed) {
+            const index = this.gallery.findIndex(photo => photo.id ===showed.id)
+            this.photoShowed = this.gallery[index-1]
+        },
+
+        nextPhoto(showed) {
+            const index = this.gallery.findIndex(photo => photo.id ===showed.id)
+            this.photoShowed = this.gallery[index+1]
+        },
+
         openIG(user){
-        console.log('aa');
             const a = document.createElement("a");
             let url = `https://www.instagram.com/${user}`
             a.setAttribute('href', url);
@@ -1297,7 +1372,6 @@ import music from './assets/music/music.mp3'
         },
 
         sendWishes(){
-            console.log('aaa');
             if(this.namaTamu === '' || this.wishes === ''){
                 return
             }
