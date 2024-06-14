@@ -408,7 +408,7 @@
                 </div>
             </div>
 
-            <div class="fixed top-0 h-screen w-full bg-gray-darkest/80 backdrop-blur-sm z-60 flex flex-col justify-center items-center transition" v-if="photoShowed">
+            <div class="fixed top-0 h-screen w-full bg-gray-darkest/80 backdrop-blur-sm z-60 flex flex-col justify-center items-center transition pt-16" v-if="photoShowed">
                 <div class="flex justify-between">
                     <div class="m-auto cursor-pointer w-8 h-8">
                         <div  @click="prevPhoto(photoShowed)" v-if="photoShowed.id>1">
@@ -1148,12 +1148,12 @@ import music from './assets/music/music.mp3'
             duration: 1.7
         }, "<")
 
-        tlGallery.to(".photo", {
-            scale: 1,
-            stagger: 0.2,
-            // duration: 1,
-            delay: 1
-        }, "+=0.2")
+        // tlGallery.to(".photo", {
+        //     scale: 1,
+        //     stagger: 0.2,
+        //     // duration: 1,
+        //     delay: 1
+        // }, "+=0.2")
 
         // Thank You transition
         let tlThankYou = gsap.timeline({
