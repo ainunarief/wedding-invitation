@@ -12,11 +12,11 @@
     <img :src="graphicBlueLighter" alt="graphic-blue-lighter" class="fixed-elements fixed inset-x-0 m-auto opacity-60 -top-2/3 lg:top-full z-10" :width="graphicWidth" id="graphic-blue-lighter-top">
     <img :src="graphicBlueLighter" alt="graphic-blue-lighter" class="fixed-elements fixed inset-x-0 m-auto opacity-60 -bottom-2/3 lg:bottom-full z-10" :width="graphicWidth" id="graphic-blue-lighter-bottom">
 
-    <img :src="graphicPlain" alt="graphic-plain" class="fixed-elements fixed inset-0 m-auto flex justify-center items-center w-full lg:w-1/3 px-1 opacity-0 z-10" id="graphic-plain">
+    <img :src="graphicPlain" alt="graphic-plain" class="fixed-elements fixed inset-0 m-auto flex justify-center items-center w-full lg:w-1/4 px-1 opacity-0 z-10" id="graphic-plain">
 
-    <img :src="flowerDecor" alt="flower-top" class="fixed-elements fixed inset-0 m-auto -top-80 w-full lg:w-1/3 px-3 opacity-0 z-10" id="flower-top">
+    <img :src="flowerDecor" alt="flower-top" class="fixed-elements fixed inset-0 m-auto -top-80 lg:-top-96 w-full lg:w-1/4 px-3 opacity-0 z-10" id="flower-top">
 
-    <img :src="flowerDecor" alt="flower-bottom" class="fixed-elements fixed inset-0 m-auto -bottom-80 w-full lg:w-1/3 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
+    <img :src="flowerDecor" alt="flower-bottom" class="fixed-elements fixed inset-0 m-auto -bottom-80 lg:-bottom-96 w-full lg:w-1/4 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
 
     <img :src="frameUrl" alt="frame" class="fixed-elements fixed h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
 
@@ -93,7 +93,7 @@
         <section class="page s1 h-screen flex justify-center items-center" id="ar-rum">
             <div class="flex flex-col mx-12 lg:w-1/2 justify-center items-center relative h-screen">
                 <span class="font-bold text-red-darkest mb-4 z-20" id="surat">Q.S. Ar Rum: 21</span>
-                <p class="font-semibold text-blue-darkest text-center z-20">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
+                <p class="font-semibold text-blue-darkest text-center z-20" id="ayat">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
                 
                 <div class="absolute bottom-0 mx-auto z-30 mb-24">
                     <span class="text-red font-semibold">scroll down</span>
@@ -106,7 +106,7 @@
         <!-- Salam -->
         <section class="page s2 h-screen flex flex-col justify-center items-center mx-12 z-20" id="salam">
             <span class="font-bold text-red-darkest mb-4 z-20" id="assalam">Assalamu'alaikum Wr Wb</span>
-            <p class="font-semibold text-blue-darkest text-center z-20">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami</p>
+            <p class="font-semibold text-blue-darkest text-center z-20" id="salam-word">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i<br /> pada acara pernikahan kami</p>
         </section>
 
         <!-- Couple -->
@@ -135,13 +135,13 @@
                 <!-- Couple Photo -->
                 <div class="my-10 flex flex-row z-20 ">
                     <!-- <img :src="bridePhoto" alt="bride" width="115" height="180"> -->
-                    <div class="relative mr-6 -left-20 opacity-0" id="bride-photo">
+                    <div class="relative mr-6 lg:mr-10 -left-20 opacity-0" id="bride-photo">
                         <div class="bg-brides w-36 h-56 bg-center bg-no-repeat bg-cover border-4 border-brown-dark rounded-xl"></div>
                         <img :src="flowerTopLeft" alt="flower-topleft" class="absolute top-0 left-0 -mt-7 -ml-7 z-10 w-40 lg:w-128 opacity-0" id="flower-top-left-bride">
                         <img :src="flowerBottomRight" alt="flower-topleft" class="absolute bottom-0 right-0 -mr-7 -mb-7 z-10 w-40 lg:w-128 opacity-0" id="flower-bottom-right-bride">
                     </div>
 
-                    <div class="relative ml-6 -right-20 opacity-0" id="groom-photo">
+                    <div class="relative ml-6 lg:ml-10 -right-20 opacity-0" id="groom-photo">
                         <div class="bg-groom w-36 h-56 bg-center bg-no-repeat bg-cover border-4 border-brown-dark rounded-xl"></div>
                         <img :src="flowerTopLeft" alt="flower-topleft" class="absolute top-0 left-0 -mt-7 -ml-7 z-10 w-40 lg:w-128 opacity-0" id="flower-top-left-groom">
                         <img :src="flowerBottomRight" alt="flower-topleft" class="absolute bottom-0 right-0 -mr-7 -mb-7 z-10 w-40 lg:w-128 opacity-0" id="flower-top-left-groom">
@@ -261,7 +261,7 @@
                             </defs>
                         </svg>
 
-                        <span class="font-semibold text-brown text-base ml-2">11:00 AM</span>
+                        <span class="font-semibold text-brown text-base ml-2">11:00 AM - 01:00 PM</span>
                     </div>
                 </div>
                 <!-- Resepsi Location -->
@@ -285,7 +285,7 @@
             <!-- Gift Header -->
             <div class="absolute top-0 w-full z-20 -left-40 opacity-0" id="gift-header">
                 <div id="rectangle-top" class="box-gift top-0 absolute w-full h-44 rounded-br-10xl z-20"></div>
-                <img :src="giftHeader" alt="gift-header" class="top-0 absolute rounded-br-10xl z-20" id="gift-header-photo"/>
+                <img :src="giftHeader" alt="gift-header" class="top-0 absolute rounded-br-10xl z-20 lg:h-44" id="gift-header-photo"/>
             </div>
 
 
@@ -330,7 +330,7 @@
             <!-- Gift Footer -->
             <div class="absolute bottom-0 w-full z-20 -right-40 opacity-0" id="gift-footer">
                 <div id="rectangle-bottom" class="box-gift bottom-0 absolute w-full h-44 rounded-tl-10xl z-20"></div>
-                <img :src="giftBottom" alt="gift-footer" class="bottom-0 lg:right-0 absolute rounded-tl-10xl z-20 " id="gift-footer-photo"/>
+                <img :src="giftBottom" alt="gift-footer" class="bottom-0 lg:right-0 absolute rounded-tl-10xl z-20 lg:h-44" id="gift-footer-photo"/>
             </div>
         </section>
 
@@ -401,7 +401,7 @@
 
             <span class="name mt-3 text-3xl text-red-darkest font-semibold" id="our-gallery">Our Galley</span>
 
-            <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-auto mx-6 lg:mx-20 z-20">
+            <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-auto mx-6 lg:mx-20 lg:w-2/3 z-20">
                 <!-- <div v-for="(photo, i) in gallery" :id="i" :class="{ 'border' : isLandscape(photo) }"> -->
                 <div v-for="(photo, i) in gallery" :id="i" :class="{ 'col-span-2' : isLandscape(photo), 'col-span-2 row-span-2' : rowSpanRandom(photo, i) }">
                     <img :src="photo.url" class="photo h-auto max-w-full rounded-lg" @click="chosePhoto(photo)">
@@ -424,7 +424,7 @@
                     </div>
                     
                     <div class="m-auto cursor-pointer w-8 h-8">
-                        <div  @click="nextPhoto(photoShowed)" v-if="photoShowed.id<gallery.length-1">
+                        <div  @click="nextPhoto(photoShowed)" v-if="photoShowed.id<gallery.length">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM1.5 12C1.5 6.20101 6.20101 1.5 12 1.5C17.799 1.5 22.5 6.20101 22.5 12C22.5 17.799 17.799 22.5 12 22.5C6.20101 22.5 1.5 17.799 1.5 12Z" fill="#ffffff"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6464 7.64645C11.8417 7.45118 12.1583 7.45118 12.3536 7.64645L16.3536 11.6464C16.5488 11.8417 16.5488 12.1583 16.3536 12.3536L12.3536 16.3536C12.1583 16.5488 11.8417 16.5488 11.6464 16.3536C11.4512 16.1583 11.4512 15.8417 11.6464 15.6464L15.2929 12L11.6464 8.35355C11.4512 8.15829 11.4512 7.84171 11.6464 7.64645Z" fill="#ffffff"/>
@@ -461,7 +461,7 @@
         <!-- Thank You -->
         <section class="page s9 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="thank-you">
             
-            <div class="flex flex-col h-screen justify-center items-center z-20 opacity-0 w-full lg:w-1/3 -mt-5" id="thank-you-words">
+            <div class="flex flex-col h-screen justify-center items-center z-20 opacity-0 w-full lg:w-1/4 px-3 -mt-5" id="thank-you-words">
                 <span class="name text-brown text-3xl font-semibold">Terima Kasih</span>
                 <p class="mt-3 px-7 text-brown-lightest text-base text-center">
                     Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.
@@ -496,6 +496,7 @@ import Initial from "./Initial.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import SplitType from 'split-type'
 import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
 
 import { Vue3Lottie } from 'vue3-lottie'
@@ -584,12 +585,12 @@ import music from './assets/music/music.mp3'
                 { id: '15', url: new URL('./assets/photo/gallery/15.jpg', import.meta.url).href },
                 { id: '16', url: new URL('./assets/photo/gallery/16.jpg', import.meta.url).href },
                 { id: '17', url: new URL('./assets/photo/gallery/17.jpg', import.meta.url).href },
-                { id: '18', url: new URL('./assets/photo/gallery/18.jpg', import.meta.url).href },
+                { id: '18', url: new URL('./assets/photo/gallery/18.jpg', import.meta.url).href, landscape: true },
                 { id: '19', url: new URL('./assets/photo/gallery/19.jpg', import.meta.url).href },
                 { id: '20', url: new URL('./assets/photo/gallery/20.jpg', import.meta.url).href },
                 { id: '21', url: new URL('./assets/photo/gallery/21.jpg', import.meta.url).href },
                 { id: '22', url: new URL('./assets/photo/gallery/22.jpg', import.meta.url).href },
-                { id: '23', url: new URL('./assets/photo/gallery/23.jpg', import.meta.url).href },
+                // { id: '23', url: new URL('./assets/photo/gallery/23.jpg', import.meta.url).href },
             ],
 
             audioElement : new Audio(music),
@@ -638,9 +639,14 @@ import music from './assets/music/music.mp3'
             // markers: true
         });
 
-        // const salamElement = document.getElementById('assalam'); 
+        const container = document.getElementById('container');
 
-        // const suratElement = document.getElementById('surat'); 
+        container.style.overflowY = 'hidden';
+
+        setTimeout(() => {
+            container.style.overflowY = 'scroll';
+        }, 2000)
+
 
         var vol  = 0.70;
         var interval = 200;
@@ -676,38 +682,19 @@ import music from './assets/music/music.mp3'
         const suratElement = document.getElementById('surat');
         observer.observe(suratElement);
 
+
+        let typeSplitArRum = new SplitType('#ayat', {
+            types: 'lines, words, chars',
+            tagName: 'span'
+        })
+
+        gsap.from('#ayat .char', {
+            opacity: 0.3,
+            duration: 0.1,
+            // ease: 'power1.out',
+            stagger: 0.015,
         
-
-        // const container = document.getElementById('container');
-
-
-        // container.addEventListener('scroll', () => { 
-        //     if (this.isVisible(salamElement)) { 
-        //         this.audioElement.volume = vol
-        //         this.audioElement.play()
-        //         this.isMusicPlaying=true
-        //     } else { 
-        //         vol  = 0.70;
-        //         var interval = 200;
-        //         if (this.isVisible(suratElement)) {
-        //             var fadeout = setInterval(
-        //                 () => {
-        //                     // Reduce volume by 0.05 as long as it is above 0
-        //                     // This works as long as you start with a multiple of 0.05!
-        //                     vol -= 0.10;
-        //                     if (vol > 0) {
-        //                         this.audioElement.volume = vol;
-        //                     }
-        //                     else {
-        //                         // Stop the setInterval when 0 is reached
-        //                         this.audioElement.pause()
-        //                         this.isMusicPlaying=false
-        //                         clearInterval(fadeout);
-        //                     }
-        //                 }, interval);
-        //         } 
-        //     } 
-        // }); 
+        })
 
         
         // Ar-Rum transition
@@ -763,6 +750,19 @@ import music from './assets/music/music.mp3'
                 scrub: true
             },
         })
+
+        // let typeSplitSalam = new SplitType('#salam-word', {
+        //     types: 'lines, words, chars',
+        //     tagName: 'span'
+        // })
+
+        // tlSalam.from('#salam-word .word', {
+        //     y: '100%',
+        //     opacity: 1,
+        //     duration: 0.1,
+        //     // ease: 'power1.out',
+        //     stagger: 0.015,
+        // }, '+=2')
 
         tlSalam.to('#graphic-top-left', {
             xPercent: -50,
@@ -1268,7 +1268,7 @@ import music from './assets/music/music.mp3'
         },
 
         rowSpanRandom(target, i){
-            const random = [3, 7, 18, 26]
+            const random = [3, 7, 15, 26]
             // console.log(i);
             if(!target.landscape){
                 if(random.includes(i))  return true
@@ -1409,13 +1409,13 @@ import music from './assets/music/music.mp3'
     height: 100dvh; /* Ensure the container fills the viewport */
     overflow-y: scroll; /* Enable vertical scrolling */
     scroll-snap-type: y mandatory; /* Enable snapping on the y-axis */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-snap-stop: always; /* Ensure smooth snap even when user manually scrolls */
  }
 
  .page {
     /* height: 100dvh;  */
     scroll-snap-align: start; /* Snap each section to the top of the viewport */
-    scroll-behavior: smooth; /* Enable smooth scrolling */
-    scroll-snap-stop: always; /* Ensure smooth snap even when user manually scrolls */
     transition-timing-function: ease-in-out; /* Use ease-in-out timing function for smoother transition */
 }
 
@@ -1498,6 +1498,19 @@ import music from './assets/music/music.mp3'
         width: 450px;
         bottom: -60%;
     } 
+
+    ::-webkit-scrollbar {
+    width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+    background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background: #A95576;
+    border-radius: 10px;
+    }
 }
 
 @media (max-width: 1024px) {

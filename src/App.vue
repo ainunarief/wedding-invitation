@@ -63,6 +63,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+:root {
+     color-scheme: light only;
+}
 /* 
 ::-webkit-scrollbar {
   width: 8px;

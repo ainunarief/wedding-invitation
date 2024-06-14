@@ -55,6 +55,9 @@ export default {
       }
     },
     extend: {
+      rotate: {
+        '30': '30deg',
+      },
       spacing: {
         '128': '32rem',
       },
