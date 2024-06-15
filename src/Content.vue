@@ -1410,12 +1410,12 @@ import music from './assets/music/music.mp3'
     overflow-y: scroll; /* Enable vertical scrolling */
     scroll-snap-type: y mandatory; /* Enable snapping on the y-axis */
     scroll-behavior: smooth; /* Enable smooth scrolling */
-    scroll-snap-stop: always; /* Ensure smooth snap even when user manually scrolls */
  }
 
  .page {
     /* height: 100dvh;  */
     scroll-snap-align: start; /* Snap each section to the top of the viewport */
+    scroll-snap-stop: always; /* Ensure smooth snap even when user manually scrolls */
     transition-timing-function: ease-in-out; /* Use ease-in-out timing function for smoother transition */
 }
 

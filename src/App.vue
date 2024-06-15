@@ -67,6 +67,12 @@ body {
 :root {
      color-scheme: light only;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-blue-lightest;
+  }
+}
 /* 
 ::-webkit-scrollbar {
   width: 8px;
