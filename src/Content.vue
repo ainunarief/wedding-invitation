@@ -336,7 +336,7 @@
 
         <!-- Wishes -->
         <section class="page s7 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="wishes">
-            <div class="flex flex-col justify-center items-center z-20 w-full lg:w-1/2 px-6">
+            <div class="flex flex-col justify-center items-center h-screen z-20 w-full lg:w-1/2 px-6">
                 <initial colors="#5E2131" id="initial-wishes" class="opacity-80"></initial>
 
                 <span class="name text-red-darkest text-4xl font-semibold my-1 opacity-100">Wedding Wishes</span>
@@ -382,7 +382,7 @@
                 <img :src="border" alt="border" class="my-1 w-full" height="18" id="border">
 
                 <!-- wishes -->
-                <div class="w-full overflow-y-auto h-1/4 flex flex-col z-30" id="list-wishes">
+                <div class="w-full overflow-y-auto h-2/5 flex flex-col z-30" id="list-wishes">
                     <div 
                         class="wish flex flex-col w-full p-2 border border-red-light border-2 bg-wishes backdrop-blur rounded-xl mb-2"
                         v-for="wish in listWishes">
