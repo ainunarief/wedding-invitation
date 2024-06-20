@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed z-50 bg-blue-lightest h-dvh w-full flex flex-col justify-center items-center">   
+    <div class="fixed z-50 bg-blue-lightest h-dvh lg:h-screen w-full flex flex-col justify-center items-center">   
         <Vue3Lottie :animationData="heart" :height="160" :width="160" />
 
         <div id="loving" class="text-slate-500 text-3xl font-semibold text-blue-darkest">Loving...</div>

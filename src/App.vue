@@ -36,7 +36,62 @@
       setTimeout(()=>{
         this.isLoading = false
       },2500)
+
+      console.log(window.devicePixelRatio);
+
+      // let viewport = document.querySelector("meta[name=viewport]");
+
+      // document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale='+(1/window.devicePixelRatio)+', maximum-scale=1.0, user-scalable=0');
+      // document.body.style.zoom = (1 / window.devicePixelRatio);
+
+      // if(window.devicePixelRatio = 1.5){
+      //   console.log('tul');
+        
+      //   if(!viewport){
+      //     viewport = document.createElement('meta');
+      //     viewport.name = "viewport";
+      //     document.getElementsByTagName('head')[0].appendChild(viewport);
+      //   }
+
+      //   const content = "width=device-width, initial-scale=0.5, user-scalable=no"
+      //   viewport.setAttribute('content', content);
+      //   var scale = 'scale(0.75)';
+      //   document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+      //   document.body.style.msTransform =   scale;       // IE 9
+      //   document.body.style.transform = scale;  
+      // }
+
+      // document.body.style.zoom = "100%"
+      // var scale = 'scale(1)';
+      // document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+      // document.body.style.msTransform =   scale;       // IE 9
+      // document.body.style.transform = scale;    
      
+      // document.addEventListener("keydown", function (e) {
+      //   if (
+      //     e.ctrlKey &&
+      //     (e.keyCode == "61" ||
+      //       e.keyCode == "107" ||
+      //       e.keyCode == "173" ||
+      //       e.keyCode == "109" ||
+      //       e.keyCode == "187" ||
+      //       e.keyCode == "189")
+      //   ) {
+      //     e.preventDefault();
+      //   }
+      // });
+
+      // document.addEventListener(
+      //   "wheel", 
+      //   function (e) {
+      //     if (e.ctrlKey) {
+      //       e.preventDefault();
+      //     }
+      //   },
+      //   {
+      //     passive: false
+      //   }
+      // );
     },
 
     methods:{
@@ -65,6 +120,7 @@ body {
 }
 
 :root {
+      zoom: reset;
      color-scheme: light only;
 }
 
@@ -73,6 +129,24 @@ body {
     @apply bg-blue-lightest;
   }
 }
+
+/* @media(-webkit-device-pixel-ratio: 1.25) {
+  body {
+    zoom: 0.8;
+  }
+}
+
+@media(-webkit-device-pixel-ratio: 1.5) {
+  body {
+    zoom: 0.6667;
+  }
+}
+
+@media(-webkit-device-pixel-ratio: 1.75) {
+  body {
+    zoom: 0.571;
+  }
+} */
 /* 
 ::-webkit-scrollbar {
   width: 8px;

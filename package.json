@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "add-to-calendar-button": "^2.6.18",
     "appwrite": "^14.0.0-rc.5",
     "docslider": "^3.0.1",
     "gsap": "^3.12.3",

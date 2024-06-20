@@ -1,6 +1,6 @@
 <template>
-    <div id="cover" class="h-dvh">
-        <img :src="frameUrl" alt="frame" class="absolute h-dvh inset-0 m-auto flex justify-center items-center p-2 z-10" id="frame">
+    <div id="cover" class="h-dvh lg:h-screen">
+        <img :src="frameUrl" alt="frame" class="absolute h-dvh lg:h-screen inset-0 m-auto flex justify-center items-center p-2 z-10" id="frame">
 
         <img :src="bgFlower" alt="bg-flower-topleft" width="750" class="fixed z-10" id="bg-flower-top-left">
         <img :src="bgFlower" alt="bg-flower-bottomright" width="750" class="fixed z-10 rotate-180 right-0 bottom-0" id="bg-flower-bottom-right">
@@ -13,8 +13,8 @@
         <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -left-52 rotate-30" :width="graphicWidth" id="graphic-left">
         <img :src="graphic" alt="graphic" class="fixed z-30 graphic-corner -bottom-64" :width="graphicWidth" id="graphic-bottom"> -->
 
-        <div class="relative h-dvh w-full bg-blue-darkest ">
-            <div class="z-20 relative h-dvh flex flex-col justify-between items-center text-base">
+        <div class="relative h-dvh lg:h-screen w-full bg-blue-darkest ">
+            <div class="z-20 relative h-dvh lg:h-screen flex flex-col justify-between items-center text-base">
                 <div class="flex flex-col items-center mt-24 pt-6">
                     <initial colors="#E3F4FB" id="initial"></initial>
                     <div class="flex flex-col" id="title">
