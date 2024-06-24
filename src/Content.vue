@@ -18,7 +18,7 @@
 
     <img :src="flowerDecor" alt="flower-bottom" class="fixed-elements fixed inset-0 m-auto -bottom-80 lg:-bottom-96 w-full lg:w-1/4 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
 
-    <img :src="frameUrl" alt="frame" class="fixed-elements fixed h-dvh lg:h-screen inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
+    <img :src="frameUrl" alt="frame" class="fixed-elements fixed h-screen inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
 
     <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed-elements fixed -left-28 -top-28 z-10 opacity-0" id="bg-flower-top-left">
     <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed-elements fixed -right-28 -bottom-28 z-10 rotate-180 opacity-0" id="bg-flower-bottom-right">
@@ -26,7 +26,7 @@
     <img :src="flowerTopLeft" alt="flower-left-corner" class="fixed-elements fixed -left-20 -top-20 opacity-0 z-10 w-80 lg:w-128" id="flower-left-corner" fetchpriority="high">
     <img :src="flowerBottomRight" alt="flower-right-corner" class="fixed-elements fixed -right-20 -bottom-20 opacity-0 z-10 w-80 lg:w-128" id="flower-right-corner" fetchpriority="high">
 
-    <div class="fixed bottom-0 left-0 mb-6 ml-6 w-10 h-10 flex flex-col justify-center items-center z-50 bg-brown rounded-full opacity-0" id="music-player" @click="playStopMusic">
+    <div class="fixed bottom-0 left-0 mb-6 ml-6 w-10 h-10 flex flex-col justify-center items-center z-50 bg-brown rounded-full opacity-0 cursor-pointer" id="music-player" @click="playStopMusic">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="isMusicPlaying">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C5.5 3.72386 5.72386 3.5 6 3.5H10C10.2761 3.5 10.5 3.72386 10.5 4V20C10.5 20.2761 10.2761 20.5 10 20.5H6C5.72386 20.5 5.5 20.2761 5.5 20V4ZM6.5 4.5V19.5H9.5V4.5H6.5Z" fill="#5E2131"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 4C13.5 3.72386 13.7239 3.5 14 3.5H18C18.2761 3.5 18.5 3.72386 18.5 4V20C18.5 20.2761 18.2761 20.5 18 20.5H14C13.7239 20.5 13.5 20.2761 13.5 20V4ZM14.5 4.5V19.5H17.5V4.5H14.5Z" fill="#5E2131"/>
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Back to top -->
-    <div class="fixed bottom-0 right-0 mb-6 mr-6 w-12 h-12 flex flex-col justify-center items-center rounded-full z-50 opacity-0" @click="scrollToTop" id="scroll-to-top">
+    <div class="fixed bottom-0 right-0 mb-6 mr-6 w-12 h-12 flex flex-col justify-center items-center rounded-full z-50 opacity-0 cursor-pointer" @click="scrollToTop" id="scroll-to-top">
         <svg width="100%" height="100%" viewBox="0 0 148 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <g transform="matrix(1,0,0,1,-6715.77,-4140.13)">
                 <g transform="matrix(-0.999822,-0.0188613,0.0188613,-0.999822,13504.3,8567.48)">
@@ -87,35 +87,35 @@
     
 
     <!-- Content -->
-    <div id="container" class="w-full h-dvh lg:h-screen relative overflow-x-hidden">   
+    <div id="container" class="w-full h-screen relative overflow-x-hidden">   
 
         <!-- Ar-Rum -->
-        <section class="page s1 h-screen flex justify-center items-center">
-            <div class="h-dvh flex justify-center items-center relative" id="ar-rum">
+        <section class="page s1 h-screen flex justify-center items-center" id="ar-rum">
+            <!-- <div class="h-dvh flex justify-center items-center relative" id="ar-rum"> -->
                 <div class="flex flex-col mx-12 lg:w-1/2 justify-center items-center relative h-screen">
                     <span class="font-bold text-red-darkest mb-4 z-20" id="surat">Q.S. Ar Rum: 21</span>
                     <p class="font-semibold text-blue-darkest text-center z-20" id="ayat">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
                     
                     <div class="absolute bottom-0 mx-auto z-30 mb-24">
-                        <span class="text-red font-semibold">scroll down</span>
-                        <Vue3Lottie :animationData="scrollDown" :height="60" :width="60" class="-mt-3"/>
+                        <!-- <span class="text-red font-semibold">scroll down</span> -->
+                        <Vue3Lottie :animationData="swipeUp" :height="90" :width="90" class="-mt-3"/>
                         
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Salam -->
-        <section class="page s2 h-screen flex flex-col justify-center items-center mx-12 z-20">
-            <div class="h-dvh flex flex-col justify-center items-center relative" id="salam">
+        <section class="page s2 h-screen flex flex-col justify-center items-center mx-12 z-20"  id="salam">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative" id="salam"> -->
                 <span class="font-bold text-red-darkest mb-4 z-20" id="assalam">Assalamu'alaikum Wr Wb</span>
                 <p class="font-semibold text-blue-darkest text-center z-20" id="salam-word">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i<br /> pada acara pernikahan kami</p>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Couple -->
-        <section class="page s3 h-screen flex flex-col justify-center items-center z-20">
-            <div class="h-dvh flex flex-col justify-center items-center relative" id="couple">
+        <section class="page s3 h-screen flex flex-col justify-center items-center z-20" id="couple">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative" id="couple"> -->
                 <initial colors="#782D41" id="initial-couple" class="opacity-0 z-20"></initial>
 
                 <div class="flex flex-col h-auto items-center mt-4 relative">
@@ -170,12 +170,12 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Akad -->
-        <section class="page s4 h-screen flex flex-col justify-center items-center relative w-full z-20">
-            <div class="h-dvh flex flex-col justify-center items-center relative" id="akad">
+        <section class="page s4 h-screen flex flex-col justify-center items-center relative w-full z-20" id="akad">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative" id="akad"> -->
                 <span class="absolute name top-8 lg:top-12 text-3xl text-red-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
                 <div class="inset-0 flex flex-col justify-center items-center z-20">
@@ -217,12 +217,12 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Resepsi -->
-        <section class="page s5 h-screen flex flex-col justify-center items-center relative w-full z-20">
-            <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="resepsi">
+        <section class="page s5 h-screen flex flex-col justify-center items-center relative w-full z-20" id="resepsi">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="resepsi"> -->
                 <div class="flex flex-col absolute top-8 lg:top-12 justify-center items-center">
                     <span class="name text-3xl text-red-darkest font-semibold opacity-0" id="resepsi-nikah">Resepsi Pernikahan</span>
 
@@ -290,7 +290,7 @@
                 <div class="absolute bottom-20 lg:bottom-20 z-20">
                     <add-to-calendar-button
                         label="Simpan Tanggal"
-                        name="Ainun Arief Wedding"
+                        name="Ainun & Arief Wedding"
                         options="'Apple','Google','iCal'"
                         startDate="2024-07-20"
                         endDate="2024-07-20"
@@ -300,12 +300,12 @@
                         listStyle="modal"
                     ></add-to-calendar-button>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Gift -->
-        <section class="page s6 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full">
-            <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="gift">
+        <section class="page s6 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="gift">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="gift"> -->
                 <div v-if="textCopied" class="absolute top-44 z-50 bg-blue-light py-1 px-2 rounded-lg text-blue-darkest font-semibold transition">
                     Nomor rekening tersalin
                 </div>
@@ -359,13 +359,13 @@
                     <div id="rectangle-bottom" class="box-gift bottom-0 absolute w-full h-44 rounded-tl-10xl z-20"></div>
                     <img :src="giftBottom" alt="gift-footer" class="bottom-0 lg:right-0 absolute rounded-tl-10xl z-20 lg:h-44" id="gift-footer-photo"/>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Wishes -->
-        <section class="page s7 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full">
-            <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="wishes">
-                <div class="flex flex-col justify-center items-center h-screen z-20 w-full lg:w-1/3 px-6">
+        <section class="page s7 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="wishes">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="wishes"> -->
+                <div class="flex flex-col justify-center items-center h-screen z-20 w-full lg:w-1/3 px-6" id="wedding-wishes">
                     <initial colors="#5E2131" id="initial-wishes" class="opacity-80"></initial>
 
                     <span class="name text-red-darkest text-4xl font-semibold my-1 opacity-100">Wedding Wishes</span>
@@ -421,18 +421,18 @@
                     </div>
 
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
         <!-- Gallery -->
-        <section class="page s8 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full">
-            <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="gallery">
+        <section class="page s8 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="gallery">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="gallery"> -->
 
                 <initial colors="#5E2131" id="initial-gallery" class="opacity-80"></initial>
 
                 <span class="name mt-3 text-3xl text-red-darkest font-semibold" id="our-gallery">Our Galley</span>
 
-                <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-auto mx-6 lg:mx-20 lg:w-2/3 z-20">
+                <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-scroll mx-6 lg:mx-20 lg:w-2/3 z-10">
                     <!-- <div v-for="(photo, i) in gallery" :id="i" :class="{ 'border' : isLandscape(photo) }"> -->
                     <div v-for="(photo, i) in gallery" :id="i" :class="{ 'col-span-2' : isLandscape(photo), 'col-span-2 row-span-2' : rowSpanRandom(photo, i) }">
                         <img :src="photo.url" class="photo h-auto max-w-full rounded-lg" @click="chosePhoto(photo)">
@@ -473,7 +473,7 @@
 
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
 
             <!-- {{ photoShowed }} -->
 
@@ -491,8 +491,8 @@
         </section>
 
         <!-- Thank You -->
-        <section class="page s9 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full">
-            <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="thank-you">
+        <section class="page s9 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="thank-you">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="thank-you"> -->
             
                 <div class="flex flex-col h-screen justify-center items-center z-20 opacity-0 w-full lg:w-1/4 px-3 -mt-5" id="thank-you-words">
                     <span class="name text-brown text-3xl font-semibold">Terima Kasih</span>
@@ -501,13 +501,13 @@
                     </p>
                     <span class="mt-2 text-brown-dark font-semibold">Wassalamu‘alaikum Wr Wb</span>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
 
         <!-- Closing -->
         <section class="page s10 h-screen bg-blue-darkest flex flex-col justify-center items-center relative w-full" id="closing">
-            <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="closing">
+            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="closing"> -->
 
                 <div class="flex flex-col justify-center items-center my-8 text-brown font-semibold z-10 text-lg">
                     <span>Kami yang berbahagia</span>
@@ -517,8 +517,8 @@
                 <div class="text-brown text-lg font-semibold mt-24">
                     AINUN & ARIEF 
                 </div>
-                <initial colors="#E5ABB5" id="initial-wishes" class="mt-4 opacity-80"></initial>
-            </div>
+                <initial colors="#E5ABB5" id="initial-closing" class="mt-4 opacity-80"></initial>
+            <!-- </div> -->
         </section>
 
     </div>
@@ -538,6 +538,8 @@ import 'add-to-calendar-button';
 
 import scrollDown from './assets/scroll_down.json'
 
+import swipeUp from './assets/swipe-up.json'
+
 import music from './assets/music/music.mp3'
 
 // import "./plugins/fullpage-scroll"
@@ -554,6 +556,7 @@ import music from './assets/music/music.mp3'
     data() {
         return {
             scrollDown,
+            swipeUp,
             isMusicPlaying: false,
 
             scrolling :{
@@ -1157,6 +1160,11 @@ import music from './assets/music/music.mp3'
             x: -40,
             duration: 1.7
         }, "<")
+
+        tlWishes.from("#wedding-wishes", {
+            scale: 0,
+            // duration: 2
+        }, ">")
 
         // Gallery transition
         let tlGallery = gsap.timeline({

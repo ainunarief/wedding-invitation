@@ -37,8 +37,6 @@
         this.isLoading = false
       },2500)
 
-      console.log(window.devicePixelRatio);
-
       // let viewport = document.querySelector("meta[name=viewport]");
 
       // document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale='+(1/window.devicePixelRatio)+', maximum-scale=1.0, user-scalable=0');
