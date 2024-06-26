@@ -432,7 +432,7 @@
 
                 <span class="name mt-3 text-3xl text-red-darkest font-semibold" id="our-gallery">Our Galley</span>
 
-                <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-scroll mx-6 lg:mx-20 lg:w-2/3 z-10">
+                <div class="h-4/5 mt-3 grid grid-cols-3 lg:grid-cols-5 gap-4 overflow-y-scroll overscroll-auto mx-6 lg:mx-20 lg:w-2/3 z-10">
                     <!-- <div v-for="(photo, i) in gallery" :id="i" :class="{ 'border' : isLandscape(photo) }"> -->
                     <div v-for="(photo, i) in gallery" :id="i" :class="{ 'col-span-2' : isLandscape(photo), 'col-span-2 row-span-2' : rowSpanRandom(photo, i) }">
                         <img :src="photo.url" class="photo h-auto max-w-full rounded-lg" @click="chosePhoto(photo)">
