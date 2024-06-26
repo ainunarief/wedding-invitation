@@ -688,13 +688,13 @@ import music from './assets/music/music.mp3'
             // markers: true
         });
 
-        const container = document.getElementById('container');
+        // const container = document.getElementById('container');
 
-        container.style.overflowY = 'hidden';
+        // container.style.overflowY = 'hidden';
 
-        setTimeout(() => {
-            container.style.overflowY = 'scroll';
-        }, 2000)
+        // setTimeout(() => {
+        //     container.style.overflowY = 'scroll';
+        // }, 2000)
 
 
         var vol  = 0.70;
