@@ -18,7 +18,7 @@
 
     <img :src="flowerDecor" alt="flower-bottom" class="fixed-elements fixed inset-0 m-auto -bottom-80 lg:-bottom-96 w-full lg:w-1/4 px-3 rotate-180 opacity-0 z-10" id="flower-bottom">
 
-    <img :src="frameUrl" alt="frame" class="fixed-elements fixed h-screen inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
+    <img :src="frameUrl" alt="frame" class="fixed-elements fixed h-fullpage inset-0 m-auto flex justify-center items-center p-2 z-10 opacity-0" id="frame">
 
     <img :src="bgFlower" alt="bg-flower-topleft" width="700" class="fixed-elements fixed -left-28 -top-28 z-10 opacity-0" id="bg-flower-top-left">
     <img :src="bgFlower" alt="bg-flower-bottomright" width="700" class="fixed-elements fixed -right-28 -bottom-28 z-10 rotate-180 opacity-0" id="bg-flower-bottom-right">
@@ -87,11 +87,11 @@
     
 
     <!-- Content -->
-    <div id="container" class="w-full h-screen relative overflow-x-hidden">   
+    <div id="container" class="w-full h-fullpage relative overflow-x-hidden">   
 
         <!-- Ar-Rum -->
         <section class="page s1 h-screen flex justify-center items-center" id="ar-rum">
-            <!-- <div class="h-dvh flex justify-center items-center relative" id="ar-rum"> -->
+            <!-- <div class="h-fullpage flex justify-center items-center relative" id="ar-rum"> -->
                 <div class="flex flex-col mx-12 lg:w-1/2 justify-center items-center relative h-screen">
                     <span class="font-bold text-red-darkest mb-4 z-20" id="surat">Q.S. Ar Rum: 21</span>
                     <p class="font-semibold text-blue-darkest text-center z-20" id="ayat">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
@@ -107,7 +107,7 @@
 
         <!-- Salam -->
         <section class="page s2 h-screen flex flex-col justify-center items-center mx-12 z-20"  id="salam">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative" id="salam"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative" id="salam"> -->
                 <span class="font-bold text-red-darkest mb-4 z-20" id="assalam">Assalamu'alaikum Wr Wb</span>
                 <p class="font-semibold text-blue-darkest text-center z-20" id="salam-word">Tanpa mengurangi rasa hormat,<br/> kami bermaksud mengundang Bapak/Ibu/Saudara/i<br /> pada acara pernikahan kami</p>
             <!-- </div> -->
@@ -115,7 +115,7 @@
 
         <!-- Couple -->
         <section class="page s3 h-screen flex flex-col justify-center items-center z-20" id="couple">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative" id="couple"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative" id="couple"> -->
                 <initial colors="#782D41" id="initial-couple" class="opacity-0 z-20"></initial>
 
                 <div class="flex flex-col h-auto items-center mt-4 relative">
@@ -175,7 +175,7 @@
 
         <!-- Akad -->
         <section class="page s4 h-screen flex flex-col justify-center items-center relative w-full z-20" id="akad">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative" id="akad"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative" id="akad"> -->
                 <span class="absolute name top-8 lg:top-12 text-3xl text-red-darkest font-semibold opacity-0" id="akad-nikah">Akad Nikah</span>
 
                 <div class="inset-0 flex flex-col justify-center items-center z-20">
@@ -222,7 +222,7 @@
 
         <!-- Resepsi -->
         <section class="page s5 h-screen flex flex-col justify-center items-center relative w-full z-20" id="resepsi">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="resepsi"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="resepsi"> -->
                 <div class="flex flex-col absolute top-8 lg:top-12 justify-center items-center">
                     <span class="name text-3xl text-red-darkest font-semibold opacity-0" id="resepsi-nikah">Resepsi Pernikahan</span>
 
@@ -305,7 +305,7 @@
 
         <!-- Gift -->
         <section class="page s6 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="gift">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="gift"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="gift"> -->
                 <div v-if="textCopied" class="absolute top-44 z-50 bg-blue-light py-1 px-2 rounded-lg text-blue-darkest font-semibold transition">
                     Nomor rekening tersalin
                 </div>
@@ -364,7 +364,7 @@
 
         <!-- Wishes -->
         <section class="page s7 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="wishes">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="wishes"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="wishes"> -->
                 <div class="flex flex-col justify-center items-center h-screen z-20 w-full lg:w-1/3 px-6" id="wedding-wishes">
                     <initial colors="#5E2131" id="initial-wishes" class="opacity-80"></initial>
 
@@ -426,7 +426,7 @@
 
         <!-- Gallery -->
         <section class="page s8 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="gallery">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="gallery"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="gallery"> -->
 
                 <initial colors="#5E2131" id="initial-gallery" class="opacity-80"></initial>
 
@@ -492,7 +492,7 @@
 
         <!-- Thank You -->
         <section class="page s9 h-screen bg-gray-lightest flex flex-col justify-center items-center relative w-full" id="thank-you">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="thank-you"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="thank-you"> -->
             
                 <div class="flex flex-col h-screen justify-center items-center z-20 opacity-0 w-full lg:w-1/4 px-3 -mt-5" id="thank-you-words">
                     <span class="name text-brown text-3xl font-semibold">Terima Kasih</span>
@@ -507,7 +507,7 @@
 
         <!-- Closing -->
         <section class="page s10 h-screen bg-blue-darkest flex flex-col justify-center items-center relative w-full" id="closing">
-            <!-- <div class="h-dvh flex flex-col justify-center items-center relative w-full" id="closing"> -->
+            <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="closing"> -->
 
                 <div class="flex flex-col justify-center items-center my-8 text-brown font-semibold z-10 text-lg">
                     <span>Kami yang berbahagia</span>
@@ -576,7 +576,7 @@ import music from './assets/music/music.mp3'
             flowerDecor: new URL('./assets/flower_decor.webp', import.meta.url).href,
             graphicPlain: new URL('./assets/graphic_plain.png', import.meta.url).href,
 
-            urlAkadMap: 'https://maps.app.goo.gl/7Tma5U5bH5D6Tbc87',
+            urlAkadMap: 'https://maps.app.goo.gl/SAg7ySGhhrkBMjFt9',
 
             countDownDate : new Date("Jul 20, 2024 10:00:00").getTime(),
             remaining:{
@@ -688,13 +688,13 @@ import music from './assets/music/music.mp3'
             // markers: true
         });
 
-        // const container = document.getElementById('container');
+        const container = document.getElementById('container');
 
-        // container.style.overflowY = 'hidden';
+        container.style.overflowY = 'hidden';
 
-        // setTimeout(() => {
-        //     container.style.overflowY = 'scroll';
-        // }, 2000)
+        setTimeout(() => {
+             container.style.overflowY = 'scroll';
+        }, 2000)
 
 
         var vol  = 0.70;
@@ -1161,10 +1161,20 @@ import music from './assets/music/music.mp3'
             duration: 1.7
         }, "<")
 
-        tlWishes.from("#wedding-wishes", {
+        // Wishes transition
+        let tlInitialWishes = gsap.timeline({
+            scrollTrigger:{
+                trigger: '#initial-wishes',
+                start: "top bottom",  
+                end: "bottom bottom", 
+                scrub: true
+            },
+        })
+
+        tlInitialWishes.from("#wedding-wishes", {
             scale: 0,
             // duration: 2
-        }, ">")
+        })
 
         // Gallery transition
         let tlGallery = gsap.timeline({
@@ -1460,18 +1470,31 @@ import music from './assets/music/music.mp3'
 </script>
 
 <style>
- #container {
+#container {
     /* height: 100dvh;  */
     overflow-y: scroll; /* Enable vertical scrolling */
-    scroll-snap-type: y mandatory; /* Enable snapping on the y-axis */
     scroll-behavior: smooth; /* Enable smooth scrolling */
- }
+}
 
- .page {
+.page {
     /* height: 100dvh;  */
-    scroll-snap-align: start; /* Snap each section to the top of the viewport */
-    scroll-snap-stop: always; /* Ensure smooth snap even when user manually scrolls */
-    transition-timing-function: ease-in-out; /* Use ease-in-out timing function for smoother transition */
+    overflow: hidden;
+}
+
+
+@supports (scroll-snap-align: start) {
+    #container {
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory; 
+        scroll-behavior: smooth;
+    }
+
+    .page {
+        overflow: hidden;
+        scroll-snap-align: start; 
+        scroll-snap-stop: always; 
+        transition-timing-function: ease-in-out;
+    }
 }
 
 .fixed-elements {

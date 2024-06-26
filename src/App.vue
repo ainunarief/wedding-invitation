@@ -128,6 +128,16 @@ body {
   }
 }
 
+.h-fullpage {
+  height: 100vh;
+}
+
+@supports (height: 100dvh){
+  .h-fullpage {
+    height: 100dvh;
+  }
+}
+
 /* @media(-webkit-device-pixel-ratio: 1.25) {
   body {
     zoom: 0.8;
