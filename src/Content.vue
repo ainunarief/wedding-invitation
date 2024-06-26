@@ -1482,7 +1482,7 @@ import music from './assets/music/music.mp3'
 }
 
 
-@supports (scroll-snap-align: start) {
+@supports (scroll-snap-align: start) and (scroll-snap-type: y mandatory) {
     #container {
         overflow-y: scroll;
         scroll-snap-type: y mandatory; 
