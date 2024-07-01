@@ -532,6 +532,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import SplitType from 'split-type'
 import { databases, DATABASE_ID, COLLECTION_ID } from './plugins/appwrite';
+import { Query } from 'appwrite';
 
 import { Vue3Lottie } from 'vue3-lottie'
 import 'add-to-calendar-button';
@@ -1423,7 +1424,13 @@ import music from './assets/music/music.mp3'
         },
 
         fetchComments() {
-            let promise = databases.listDocuments(DATABASE_ID, COLLECTION_ID);
+            let promise = databases.listDocuments(
+                            DATABASE_ID, 
+                            COLLECTION_ID, 
+                            [ 
+                                Query.limit(100),
+                                Query.orderAsc("date") 
+                            ]);
             promise.then((res) => {
                 this.listWishes = res.documents.reverse();
                 this.totalWishes = res.total;

@@ -1,4 +1,4 @@
-import { Client, Databases, Account } from 'appwrite';
+import { Client, Databases, Account, Query } from 'appwrite';
 // Init your Web SDK
 const client  = new Client();
 client 
@@ -18,6 +18,7 @@ client
 export const databases = new Databases(client);
 export const DATABASE_ID = '656841b4bb3fcf8aed93'; // Replace with your Collection ID
 export const COLLECTION_ID = '656841d8236e4cc3c1c2'; // Replace with your Collection ID
+// export Query;
 
 // export const db = appwrite.database;
 // export const COLLECTION_ID = '656841d8236e4cc3c1c2'; // Replace with your Collection ID
