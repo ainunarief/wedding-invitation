@@ -304,7 +304,7 @@
         </section>
 
         <!-- Gift -->
-        <section class="page s6 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="gift">
+        <section class="page s6 h-screen bg-red-lightest flex flex-col justify-center items-center relative w-full" id="gift" v-if="showGift">
             <!-- <div class="h-fullpage flex flex-col justify-center items-center relative w-full" id="gift"> -->
                 <div v-if="textCopied" class="absolute top-44 z-50 bg-blue-light py-1 px-2 rounded-lg text-blue-darkest font-semibold transition">
                     Nomor rekening tersalin
@@ -577,7 +577,7 @@ import music from './assets/music/music.mp3'
             flowerDecor: new URL('./assets/flower_decor.webp', import.meta.url).href,
             graphicPlain: new URL('./assets/graphic_plain.png', import.meta.url).href,
 
-            urlAkadMap: 'https://maps.app.goo.gl/SAg7ySGhhrkBMjFt9',
+            urlAkadMap: 'https://maps.app.goo.gl/7Tma5U5bH5D6Tbc87',
 
             countDownDate : new Date("Jul 20, 2024 10:00:00").getTime(),
             remaining:{
@@ -591,6 +591,7 @@ import music from './assets/music/music.mp3'
             giftHeader: new URL('./assets/photo/wed-gift-1.png', import.meta.url).href,
             giftBottom: new URL('./assets/photo/wed-gift-2.png', import.meta.url).href,
             textCopied: false,
+            showGift: true,
 
             border: new URL('./assets/border_wishes.svg', import.meta.url).href,
             namaTamu: '',
@@ -655,6 +656,11 @@ import music from './assets/music/music.mp3'
         //     // options here
         //     // slideSelector: "section",
         // });
+
+        let gift = new URLSearchParams(this.queryString);
+        if( gift.has('gift') ){
+            this.showGift = gift.get('gift') === 'true' ? true : false;
+        }
 
 
         setInterval(()=>{
@@ -982,7 +988,7 @@ import music from './assets/music/music.mp3'
 
         let tlAkadInfo = gsap.timeline({
             scrollTrigger:{
-                trigger: '#akad',
+                trigger: '#akad-nikah',
                 start: "top center",  
                 end: "+=100%",
                 toggleActions: "play none none reverse"
@@ -1127,6 +1133,8 @@ import music from './assets/music/music.mp3'
             duration: 0.7,
             backdropFilter: "blur(10px)",
         }, "<")
+
+        
         
         // Wishes transition
         let tlWishes = gsap.timeline({
@@ -1137,6 +1145,35 @@ import music from './assets/music/music.mp3'
                 scrub: true
             },
         })
+
+        if(!this.showGift) {
+            tlWishes.to(['#graphic-plain', '#flower-bottom', '#rumagadang'], {
+                duration: 1.7,
+                opacity: 0
+            })
+
+            tlWishes.to('#graphic-blue-lighter-top', {
+                duration: 1.7,
+                top: "-66.66%",
+                rotation: "0",
+            }, "<")
+
+            tlWishes.to('#graphic-blue-lighter-bottom', {
+                duration: 1.7,
+                bottom: "-66.66%",
+                rotation: "0",
+            }, "<")
+
+            tlWishes.to("#flower-left-top",{
+                yPercent: 35,
+                duration: 2
+            }, "+=0.5")
+
+            tlWishes.to("#flower-right-bottom",{
+                yPercent: -35,
+                duration: 2
+            }, "<")
+        }
 
         tlWishes.to("#flower-left-top",{
             yPercent: -100,
@@ -1454,7 +1491,7 @@ import music from './assets/music/music.mp3'
                 name : this.namaTamu,
                 wish : this.wishes,
                 date : new Date(),
-                hadir: this.hadir == 'true' ? true : false,
+                hadir: this.hadir || this.hadir == 'true' ? true : false,
                 jumlah: parseInt(this.jumlah)
             }
             const promise = databases.createDocument(DATABASE_ID, COLLECTION_ID, 'unique()', payload);
